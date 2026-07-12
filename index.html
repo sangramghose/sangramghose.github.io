@@ -158,16 +158,48 @@
         .skill-tag { padding: 7px 15px; background: var(--bg-glass); border: 1px solid var(--border-glass); border-radius: 50px; font-size: 0.8rem; color: var(--text-secondary); }
 
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .project-card { background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition-medium); }
-        .project-card:hover { border-color: var(--border-glow); transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+        }
+        .project-card:hover {
+            border-color: var(--border-glow);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--accent-primary);
+        }
+        .project-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 2px;
+            background: var(--gradient-primary);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .project-card:hover::before { opacity: 1; }
         .project-image { position: relative; height: 210px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
         .project-image-bg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4.5rem; transition: transform 0.6s ease; }
-        .project-status { position: absolute; top: 18px; left: 18px; padding: 5px 14px; border-radius: 50px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; }
-        .project-status.active { background: rgba(0,230,184,0.18); color: var(--accent-secondary); }
+        .project-card:hover .project-image-bg { transform: scale(1.08); }
+        .project-status { position: absolute; top: 18px; left: 18px; padding: 5px 14px; border-radius: 50px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; z-index: 2; }
         .project-status.completed { background: rgba(124,111,247,0.18); color: var(--accent-primary); }
-        .project-body { padding: 26px; }
+        .project-status.active { background: rgba(0,230,184,0.18); color: var(--accent-secondary); }
+        .project-body { padding: 26px; display: flex; flex-direction: column; flex: 1; }
+        .project-date { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); margin-bottom: 10px; }
+        .project-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; }
+        .project-description { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 22px; flex: 1; }
         .project-tech { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 22px; }
         .project-tech span { padding: 5px 11px; background: rgba(124,111,247,0.1); border: 1px solid rgba(124,111,247,0.2); border-radius: 5px; font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-primary); }
+        .project-link { display: inline-flex; align-items: center; gap: 7px; font-size: 0.85rem; font-weight: 500; color: var(--text-secondary); transition: var(--transition-fast); }
+        .project-link:hover { color: var(--accent-primary); }
 
         .experience-timeline { position: relative; max-width: 900px; margin: 0 auto; }
         .experience-timeline::before { content: ''; position: absolute; left: 44px; top: 10px; bottom: 10px; width: 2px; background: linear-gradient(180deg, var(--accent-primary), var(--accent-tertiary), var(--accent-secondary)); opacity: 0.25; }
@@ -346,16 +378,86 @@
         </div>
     </section>
 
+    <!-- ===== PROJECTS SECTION (UPDATED WITH NEW PROJECTS) ===== -->
     <section class="section" id="projects">
         <div class="container">
-            <div class="section-header reveal"><span class="section-label">// Portfolio</span><h2 class="section-title">What I've <span class="highlight">Built</span></h2></div>
+            <div class="section-header reveal">
+                <span class="section-label">// Portfolio</span>
+                <h2 class="section-title">What I've <span class="highlight">Built</span></h2>
+                <p class="section-subtitle">Innovative projects that combine full‑stack development, data analytics, and system design.</p>
+            </div>
             <div class="projects-grid">
-                <div class="project-card reveal"><div class="project-image"><div class="project-image-bg" style="background:linear-gradient(135deg, rgba(124,111,247,0.2), rgba(0,230,184,0.12));">🔍</div><span class="project-status active">In Progress</span></div><div class="project-body"><h3>Fraud Detection System</h3><p>AI system detecting fraud via image data analysis and computer vision.</p><div class="project-tech"><span>Python</span><span>OpenCV</span><span>TensorFlow</span></div></div></div>
-                <div class="project-card reveal"><div class="project-image"><div class="project-image-bg" style="background:linear-gradient(135deg, rgba(0,230,184,0.2), rgba(59,130,246,0.12));">🌿</div><span class="project-status completed">Completed</span></div><div class="project-body"><h3>Online Plant Nursery Store</h3><p>E-commerce platform with Flask, SQLite, and AI chatbot integration plans.</p><div class="project-tech"><span>Python</span><span>Flask</span><span>SQLite</span></div></div></div>
-                <div class="project-card reveal"><div class="project-image"><div class="project-image-bg" style="background:linear-gradient(135deg, rgba(255,94,138,0.2), rgba(124,111,247,0.12));">🧠</div><span class="project-status active">Research</span></div><div class="project-body"><h3>Cognitive Augmentation with AI</h3><p>Exploring AI-driven decision support systems and human-computer interaction.</p><div class="project-tech"><span>Python</span><span>Deep Learning</span><span>NLP</span></div></div></div>
+                <!-- CoderFlex -->
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-image-bg" style="background:linear-gradient(135deg, rgba(124,111,247,0.2), rgba(0,230,184,0.12));">💻</div>
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-date">Jul 2025 – Oct 2025</div>
+                        <h3 class="project-title">CoderFlex (Online Coding Platform)</h3>
+                        <p class="project-description">
+                            Full‑stack coding platform for 20+ users with practice problems, live competitions, and team collaboration. Containerized code execution engine supports 6 languages with sub‑2s compilation and process isolation. Won hackathon for features like syntax highlighting, dark mode, auto‑complete, and real‑time leaderboards.
+                        </p>
+                        <div class="project-tech">
+                            <span>Express.js</span><span>MongoDB</span><span>Node.js</span><span>Docker</span><span>JavaScript</span>
+                        </div>
+                        <a href="https://github.com/adityaadfj/CoderFlex" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            View Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Workforce Analyzer -->
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-image-bg" style="background:linear-gradient(135deg, rgba(0,230,184,0.2), rgba(255,94,138,0.12));">📊</div>
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-date">Jul 2025 – Aug 2025</div>
+                        <h3 class="project-title">Workforce and Industry Trend Analyzer</h3>
+                        <p class="project-description">
+                            Interactive Tableau dashboards analyzing 5,000+ employee demographics, engagement, and attrition records, enabling HR leaders to spot turnover risk 3 months early. Integrated cross‑industry datasets to identify revenue growth drivers and seasonal patterns. Dynamic filters, drill‑downs, and auto‑refreshing KPIs cut executive report creation from days to hours.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span><span>SQL</span><span>Tableau</span><span>Pandas</span><span>Data Visualization</span>
+                        </div>
+                        <a href="#" class="project-link" style="pointer-events:none; opacity:0.6;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            Private Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- IPO API -->
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-image-bg" style="background:linear-gradient(135deg, rgba(255,94,138,0.2), rgba(124,111,247,0.12));">📈</div>
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-date">Sep 2024 – Oct 2024</div>
+                        <h3 class="project-title">IPO Web Application REST API Development</h3>
+                        <p class="project-description">
+                            Django‑based REST API delivering structured IPO data (company details, pricing, performance) to a responsive frontend. User authentication, admin dashboard for content management, and PDF export for investor documentation. Optimized PostgreSQL queries for 100+ concurrent users with sub‑200ms response times.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Django REST Framework</span><span>PostgreSQL</span><span>Django</span><span>REST API</span>
+                        </div>
+                        <a href="#" class="project-link" style="pointer-events:none; opacity:0.6;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            Private Repository
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Education, Certifications, Research, Contact sections follow as before -->
+    <!-- ... (remaining sections identical to previous full code, included below for completeness) ... -->
 
     <section class="section" id="education">
         <div class="container">
@@ -392,98 +494,17 @@
 
     <section class="section" id="certifications">
         <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label">// Certifications</span>
-                <h2 class="section-title">Industry <span class="highlight">Credentials</span></h2>
-                <p class="section-subtitle">Certifications validating my expertise across data engineering, cloud, and machine learning.</p>
-            </div>
+            <div class="section-header reveal"><span class="section-label">// Certifications</span><h2 class="section-title">Industry <span class="highlight">Credentials</span></h2></div>
             <div class="certifications-grid">
-                <!-- Microsoft Fabric -->
-                <div class="cert-card reveal">
-                    <div class="cert-logo" style="background:linear-gradient(135deg,#0078D4,#00A4EF);">MS</div>
-                    <div class="cert-body">
-                        <h3>Microsoft Certified: Fabric Data Engineer Associate</h3>
-                        <p class="cert-issuer">Microsoft</p>
-                        <div class="cert-meta"><span>Issued May 2026</span> · <span>Expires May 2027</span></div>
-                        <span class="cert-id">Credential ID: 6B4E231E67CA56A</span>
-                    </div>
-                </div>
-                <!-- SAP -->
-                <div class="cert-card reveal">
-                    <div class="cert-logo" style="background:linear-gradient(135deg,#003366,#0066CC);">SAP</div>
-                    <div class="cert-body">
-                        <h3>SAP Certified - SAP Business Data Cloud</h3>
-                        <p class="cert-issuer">SAP</p>
-                        <div class="cert-meta"><span>Issued Apr 2026</span> · <span>Expires Apr 2027</span></div>
-                        <span class="cert-id">Credential ID: d1d7893b-7941-4cf2-8c4a-e60ce0ffb237</span>
-                    </div>
-                </div>
-                <!-- Altair Applications & Use Cases -->
-                <div class="cert-card reveal">
-                    <div class="cert-logo" style="background:linear-gradient(135deg,#F37021,#FF6B00);">AL</div>
-                    <div class="cert-body">
-                        <h3>Applications & Use Cases Professional</h3>
-                        <p class="cert-issuer">Altair</p>
-                        <div class="cert-meta"><span>Issued Mar 2026</span></div>
-                    </div>
-                </div>
-                <!-- Confluent -->
-                <div class="cert-card reveal">
-                    <div class="cert-logo" style="background:linear-gradient(135deg,#003A63,#0088CE);">CN</div>
-                    <div class="cert-body">
-                        <h3>Data Streaming Engineer Foundations</h3>
-                        <p class="cert-issuer">Confluent</p>
-                        <div class="cert-meta"><span>Issued Mar 2026</span></div>
-                        <span class="cert-id">Credential ID: 176355951</span>
-                    </div>
-                </div>
-                <!-- Oracle Analytics -->
-                <div class="cert-card reveal">
-                    <div class="cert-logo" style="background:linear-gradient(135deg,#C74634,#E74C3C);">OR</div>
-                    <div class="cert-body">
-                        <h3>Oracle Analytics Cloud 2025 Certified Professional</h3>
-                        <p class="cert-issuer">Oracle</p>
-                        <div class="cert-meta"><span>Issued Oct 2025</span> · <span>Expires Oct 2027</span></div>
-                        <span class="cert-id">Credential ID: 100414001OCIEA25OCP</span>
-                    </div>
-                </div>
-                <!-- Symphony Bot Developer -->
-                <div class="cert-card reveal">
-                    <div class="cert-logo" style="background:linear-gradient(135deg,#1E90FF,#00BFFF);">SY</div>
-                    <div class="cert-body">
-                        <h3>Certified Bot Developer (Python)</h3>
-                        <p class="cert-issuer">Symphony</p>
-                        <div class="cert-meta"><span>Issued Mar 2025</span></div>
-                    </div>
-                </div>
-                <!-- Altair ML Professional -->
-                <div class="cert-card reveal">
-                    <div class="cert-logo" style="background:linear-gradient(135deg,#8A2BE2,#9400D3);">AL</div>
-                    <div class="cert-body">
-                        <h3>Machine Learning Professional Certification</h3>
-                        <p class="cert-issuer">Altair</p>
-                        <div class="cert-meta"><span>Issued Sep 2025</span></div>
-                    </div>
-                </div>
-                <!-- Altair Data Engineering -->
-                <div class="cert-card reveal">
-                    <div class="cert-logo" style="background:linear-gradient(135deg,#DC143C,#8B0000);">AL</div>
-                    <div class="cert-body">
-                        <h3>Data Engineering Professional Certification</h3>
-                        <p class="cert-issuer">Altair</p>
-                        <div class="cert-meta"><span>Issued Aug 2025</span></div>
-                    </div>
-                </div>
-                <!-- Symphony Associate -->
-                <div class="cert-card reveal">
-                    <div class="cert-logo" style="background:linear-gradient(135deg,#00CED1,#48D1CC);">SY</div>
-                    <div class="cert-body">
-                        <h3>Symphony Certified Associate Developer</h3>
-                        <p class="cert-issuer">Symphony</p>
-                        <div class="cert-meta"><span>Issued Jan 2025</span></div>
-                        <span class="cert-id">Credential ID: 62d4c2db-0b3b-4dda-bce0-94d7aa65ccb9</span>
-                    </div>
-                </div>
+                <div class="cert-card reveal"><div class="cert-logo" style="background:linear-gradient(135deg,#0078D4,#00A4EF);">MS</div><div class="cert-body"><h3>Microsoft Certified: Fabric Data Engineer Associate</h3><p class="cert-issuer">Microsoft</p><div class="cert-meta"><span>Issued May 2026</span> · <span>Expires May 2027</span></div><span class="cert-id">Credential ID: 6B4E231E67CA56A</span></div></div>
+                <div class="cert-card reveal"><div class="cert-logo" style="background:linear-gradient(135deg,#003366,#0066CC);">SAP</div><div class="cert-body"><h3>SAP Certified - SAP Business Data Cloud</h3><p class="cert-issuer">SAP</p><div class="cert-meta"><span>Issued Apr 2026</span> · <span>Expires Apr 2027</span></div><span class="cert-id">Credential ID: d1d7893b-7941-4cf2-8c4a-e60ce0ffb237</span></div></div>
+                <div class="cert-card reveal"><div class="cert-logo" style="background:linear-gradient(135deg,#F37021,#FF6B00);">AL</div><div class="cert-body"><h3>Applications & Use Cases Professional</h3><p class="cert-issuer">Altair</p><div class="cert-meta"><span>Issued Mar 2026</span></div></div></div>
+                <div class="cert-card reveal"><div class="cert-logo" style="background:linear-gradient(135deg,#003A63,#0088CE);">CN</div><div class="cert-body"><h3>Data Streaming Engineer Foundations</h3><p class="cert-issuer">Confluent</p><div class="cert-meta"><span>Issued Mar 2026</span></div><span class="cert-id">Credential ID: 176355951</span></div></div>
+                <div class="cert-card reveal"><div class="cert-logo" style="background:linear-gradient(135deg,#C74634,#E74C3C);">OR</div><div class="cert-body"><h3>Oracle Analytics Cloud 2025 Certified Professional</h3><p class="cert-issuer">Oracle</p><div class="cert-meta"><span>Issued Oct 2025</span> · <span>Expires Oct 2027</span></div><span class="cert-id">Credential ID: 100414001OCIEA25OCP</span></div></div>
+                <div class="cert-card reveal"><div class="cert-logo" style="background:linear-gradient(135deg,#1E90FF,#00BFFF);">SY</div><div class="cert-body"><h3>Certified Bot Developer (Python)</h3><p class="cert-issuer">Symphony</p><div class="cert-meta"><span>Issued Mar 2025</span></div></div></div>
+                <div class="cert-card reveal"><div class="cert-logo" style="background:linear-gradient(135deg,#8A2BE2,#9400D3);">AL</div><div class="cert-body"><h3>Machine Learning Professional Certification</h3><p class="cert-issuer">Altair</p><div class="cert-meta"><span>Issued Sep 2025</span></div></div></div>
+                <div class="cert-card reveal"><div class="cert-logo" style="background:linear-gradient(135deg,#DC143C,#8B0000);">AL</div><div class="cert-body"><h3>Data Engineering Professional Certification</h3><p class="cert-issuer">Altair</p><div class="cert-meta"><span>Issued Aug 2025</span></div></div></div>
+                <div class="cert-card reveal"><div class="cert-logo" style="background:linear-gradient(135deg,#00CED1,#48D1CC);">SY</div><div class="cert-body"><h3>Symphony Certified Associate Developer</h3><p class="cert-issuer">Symphony</p><div class="cert-meta"><span>Issued Jan 2025</span></div><span class="cert-id">Credential ID: 62d4c2db-0b3b-4dda-bce0-94d7aa65ccb9</span></div></div>
             </div>
         </div>
     </section>
