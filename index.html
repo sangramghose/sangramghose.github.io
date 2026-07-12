@@ -158,34 +158,8 @@
         .skill-tag { padding: 7px 15px; background: var(--bg-glass); border: 1px solid var(--border-glass); border-radius: 50px; font-size: 0.8rem; color: var(--text-secondary); }
 
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .project-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glass);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-        }
-        .project-card:hover {
-            border-color: var(--border-glow);
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--accent-primary);
-        }
-        .project-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            padding: 2px;
-            background: var(--gradient-primary);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-        .project-card:hover::before { opacity: 1; }
+        .project-card { background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); position: relative; }
+        .project-card:hover { border-color: var(--border-glow); transform: translateY(-8px) scale(1.02); box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--accent-primary); }
         .project-image { position: relative; height: 210px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
         .project-image-bg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4.5rem; transition: transform 0.6s ease; }
         .project-card:hover .project-image-bg { transform: scale(1.08); }
@@ -354,14 +328,89 @@
         </div>
     </section>
 
+    <!-- ===== SKILLS SECTION (REFINED FOR DATA ENGINEER & AI/ML) ===== -->
     <section class="section" id="skills">
         <div class="container">
-            <div class="section-header reveal"><span class="section-label">// Tech Stack</span><h2 class="section-title">My <span class="highlight">Technical</span> Arsenal</h2><p class="section-subtitle">Technologies and tools I use to bring ideas to life.</p></div>
+            <div class="section-header reveal">
+                <span class="section-label">// Tech Stack</span>
+                <h2 class="section-title">My <span class="highlight">Technical</span> Arsenal</h2>
+                <p class="section-subtitle">Core tools and technologies for data engineering and AI/ML solutions.</p>
+            </div>
             <div class="skills-grid">
-                <div class="skill-category reveal"><div class="skill-category-header"><div class="skill-category-icon" style="background:rgba(124,111,247,0.14);">🐍</div><div><h4>Programming Languages</h4><small>Core languages</small></div></div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">C</span><span class="skill-tag">C++</span><span class="skill-tag">JavaScript</span><span class="skill-tag">SQL</span></div></div>
-                <div class="skill-category reveal"><div class="skill-category-header"><div class="skill-category-icon" style="background:rgba(0,230,184,0.14);">🤖</div><div><h4>AI & Machine Learning</h4><small>Intelligent systems</small></div></div><div class="skill-tags"><span class="skill-tag">TensorFlow</span><span class="skill-tag">PyTorch</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">OpenCV</span><span class="skill-tag">NLP</span></div></div>
-                <div class="skill-category reveal"><div class="skill-category-header"><div class="skill-category-icon" style="background:rgba(255,94,138,0.14);">🗄️</div><div><h4>Data Engineering</h4><small>Pipelines & databases</small></div></div><div class="skill-tags"><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">Spark</span><span class="skill-tag">MySQL</span><span class="skill-tag">ETL</span></div></div>
-                <div class="skill-category reveal"><div class="skill-category-header"><div class="skill-category-icon" style="background:rgba(59,130,246,0.14);">☁️</div><div><h4>Tools & Platforms</h4><small>Cloud & DevOps</small></div></div><div class="skill-tags"><span class="skill-tag">Azure</span><span class="skill-tag">AWS</span><span class="skill-tag">Databricks</span><span class="skill-tag">Git</span><span class="skill-tag">Linux</span></div></div>
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon" style="background:rgba(124,111,247,0.14);">⚙️</div>
+                        <div><h4>Data Engineering</h4><small>Pipelines, storage & processing</small></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Apache Spark</span>
+                        <span class="skill-tag">Azure Data Factory</span>
+                        <span class="skill-tag">Azure Databricks</span>
+                        <span class="skill-tag">Delta Lake</span>
+                        <span class="skill-tag">ETL/ELT</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Apache Kafka</span>
+                        <span class="skill-tag">Data Modeling</span>
+                        <span class="skill-tag">Data Warehousing</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon" style="background:rgba(0,230,184,0.14);">🤖</div>
+                        <div><h4>AI & Machine Learning</h4><small>Models, frameworks & MLOps</small></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Time Series Forecasting</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">Generative AI</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">MLflow</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon" style="background:rgba(255,94,138,0.14);">☁️</div>
+                        <div><h4>Cloud & DevOps</h4><small>Infrastructure & automation</small></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microsoft Azure</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Oracle Cloud</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon" style="background:rgba(59,130,246,0.14);">📊</div>
+                        <div><h4>Analytics & Visualization</h4><small>Insights & storytelling</small></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Jupyter</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Data Storytelling</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -378,7 +427,6 @@
         </div>
     </section>
 
-    <!-- ===== PROJECTS SECTION (UPDATED WITH NEW PROJECTS) ===== -->
     <section class="section" id="projects">
         <div class="container">
             <div class="section-header reveal">
@@ -387,77 +435,12 @@
                 <p class="section-subtitle">Innovative projects that combine full‑stack development, data analytics, and system design.</p>
             </div>
             <div class="projects-grid">
-                <!-- CoderFlex -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <div class="project-image-bg" style="background:linear-gradient(135deg, rgba(124,111,247,0.2), rgba(0,230,184,0.12));">💻</div>
-                        <span class="project-status completed">Completed</span>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-date">Jul 2025 – Oct 2025</div>
-                        <h3 class="project-title">CoderFlex (Online Coding Platform)</h3>
-                        <p class="project-description">
-                            Full‑stack coding platform for 20+ users with practice problems, live competitions, and team collaboration. Containerized code execution engine supports 6 languages with sub‑2s compilation and process isolation. Won hackathon for features like syntax highlighting, dark mode, auto‑complete, and real‑time leaderboards.
-                        </p>
-                        <div class="project-tech">
-                            <span>Express.js</span><span>MongoDB</span><span>Node.js</span><span>Docker</span><span>JavaScript</span>
-                        </div>
-                        <a href="https://github.com/adityaadfj/CoderFlex" target="_blank" class="project-link">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                            View Repository
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Workforce Analyzer -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <div class="project-image-bg" style="background:linear-gradient(135deg, rgba(0,230,184,0.2), rgba(255,94,138,0.12));">📊</div>
-                        <span class="project-status completed">Completed</span>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-date">Jul 2025 – Aug 2025</div>
-                        <h3 class="project-title">Workforce and Industry Trend Analyzer</h3>
-                        <p class="project-description">
-                            Interactive Tableau dashboards analyzing 5,000+ employee demographics, engagement, and attrition records, enabling HR leaders to spot turnover risk 3 months early. Integrated cross‑industry datasets to identify revenue growth drivers and seasonal patterns. Dynamic filters, drill‑downs, and auto‑refreshing KPIs cut executive report creation from days to hours.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span><span>SQL</span><span>Tableau</span><span>Pandas</span><span>Data Visualization</span>
-                        </div>
-                        <a href="#" class="project-link" style="pointer-events:none; opacity:0.6;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                            Private Repository
-                        </a>
-                    </div>
-                </div>
-
-                <!-- IPO API -->
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <div class="project-image-bg" style="background:linear-gradient(135deg, rgba(255,94,138,0.2), rgba(124,111,247,0.12));">📈</div>
-                        <span class="project-status completed">Completed</span>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-date">Sep 2024 – Oct 2024</div>
-                        <h3 class="project-title">IPO Web Application REST API Development</h3>
-                        <p class="project-description">
-                            Django‑based REST API delivering structured IPO data (company details, pricing, performance) to a responsive frontend. User authentication, admin dashboard for content management, and PDF export for investor documentation. Optimized PostgreSQL queries for 100+ concurrent users with sub‑200ms response times.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span><span>Django REST Framework</span><span>PostgreSQL</span><span>Django</span><span>REST API</span>
-                        </div>
-                        <a href="#" class="project-link" style="pointer-events:none; opacity:0.6;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                            Private Repository
-                        </a>
-                    </div>
-                </div>
+                <div class="project-card reveal"><div class="project-image"><div class="project-image-bg" style="background:linear-gradient(135deg, rgba(124,111,247,0.2), rgba(0,230,184,0.12));">💻</div><span class="project-status completed">Completed</span></div><div class="project-body"><div class="project-date">Jul 2025 – Oct 2025</div><h3 class="project-title">CoderFlex (Online Coding Platform)</h3><p class="project-description">Full‑stack coding platform for 20+ users with practice problems, live competitions, and team collaboration. Containerized code execution engine supports 6 languages with sub‑2s compilation and process isolation. Won hackathon for features like syntax highlighting, dark mode, auto‑complete, and real‑time leaderboards.</p><div class="project-tech"><span>Express.js</span><span>MongoDB</span><span>Node.js</span><span>Docker</span><span>JavaScript</span></div><a href="https://github.com/adityaadfj/CoderFlex" target="_blank" class="project-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>View Repository</a></div></div>
+                <div class="project-card reveal"><div class="project-image"><div class="project-image-bg" style="background:linear-gradient(135deg, rgba(0,230,184,0.2), rgba(255,94,138,0.12));">📊</div><span class="project-status completed">Completed</span></div><div class="project-body"><div class="project-date">Jul 2025 – Aug 2025</div><h3 class="project-title">Workforce and Industry Trend Analyzer</h3><p class="project-description">Interactive Tableau dashboards analyzing 5,000+ employee demographics, engagement, and attrition records, enabling HR leaders to spot turnover risk 3 months early. Integrated cross‑industry datasets to identify revenue growth drivers and seasonal patterns. Dynamic filters, drill‑downs, and auto‑refreshing KPIs cut executive report creation from days to hours.</p><div class="project-tech"><span>Python</span><span>SQL</span><span>Tableau</span><span>Pandas</span><span>Data Visualization</span></div><a href="#" class="project-link" style="pointer-events:none; opacity:0.6;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Private Repository</a></div></div>
+                <div class="project-card reveal"><div class="project-image"><div class="project-image-bg" style="background:linear-gradient(135deg, rgba(255,94,138,0.2), rgba(124,111,247,0.12));">📈</div><span class="project-status completed">Completed</span></div><div class="project-body"><div class="project-date">Sep 2024 – Oct 2024</div><h3 class="project-title">IPO Web Application REST API Development</h3><p class="project-description">Django‑based REST API delivering structured IPO data (company details, pricing, performance) to a responsive frontend. User authentication, admin dashboard for content management, and PDF export for investor documentation. Optimized PostgreSQL queries for 100+ concurrent users with sub‑200ms response times.</p><div class="project-tech"><span>Python</span><span>Django REST Framework</span><span>PostgreSQL</span><span>Django</span><span>REST API</span></div><a href="#" class="project-link" style="pointer-events:none; opacity:0.6;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Private Repository</a></div></div>
             </div>
         </div>
     </section>
-
-    <!-- Education, Certifications, Research, Contact sections follow as before -->
-    <!-- ... (remaining sections identical to previous full code, included below for completeness) ... -->
 
     <section class="section" id="education">
         <div class="container">
