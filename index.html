@@ -34,10 +34,8 @@
             --accent-primary: #7c6ff7;
             --accent-secondary: #00e6b8;
             --accent-tertiary: #ff5e8a;
-            --accent-gold: #f0c060;
             --gradient-primary: linear-gradient(135deg, #7c6ff7 0%, #00e6b8 100%);
             --gradient-secondary: linear-gradient(135deg, #ff5e8a 0%, #7c6ff7 100%);
-            --gradient-gold: linear-gradient(135deg, #f0c060 0%, #ff5e8a 100%);
             --font-primary: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
             --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
             --section-padding: 130px 0;
@@ -135,7 +133,6 @@
         .card-icon.purple { background: rgba(124,111,247,0.2); }
         .card-icon.green { background: rgba(0,230,184,0.2); }
 
-        /* Sections */
         .section { padding: var(--section-padding); position: relative; z-index: 1; }
         .container { max-width: var(--container-max); margin: 0 auto; padding: var(--container-padding); }
         .section-header { text-align: center; margin-bottom: 70px; }
@@ -198,17 +195,16 @@
         .timeline-date { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-primary); margin-bottom: 8px; }
         .timeline-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 5px; }
         .timeline-subtitle { font-size: 0.92rem; color: var(--accent-secondary); margin-bottom: 12px; }
-        .coursework p, .highlights p { font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
-        .coursework ul, .highlights ul { list-style: disc; padding-left: 20px; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; }
-        .cert-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
-        .cert-tag { padding: 4px 12px; background: rgba(0,230,184,0.1); border: 1px solid rgba(0,230,184,0.2); border-radius: 20px; font-size: 0.72rem; color: var(--accent-secondary); }
 
-        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 26px; }
-        .research-card { background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 34px; transition: var(--transition-medium); }
-        .research-card:hover { border-color: var(--border-glow); transform: translateY(-5px); }
-        .research-icon { width: 50px; height: 50px; border-radius: var(--radius-md); background: rgba(124,111,247,0.14); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 22px; }
-        .research-tags { display: flex; flex-wrap: wrap; gap: 7px; }
-        .research-tags span { padding: 4px 11px; background: rgba(0,230,184,0.1); border: 1px solid rgba(0,230,184,0.2); border-radius: 5px; font-size: 0.7rem; color: var(--accent-secondary); }
+        .research-grid, .certifications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 26px; }
+        .research-card, .cert-card { background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 34px; transition: var(--transition-medium); }
+        .research-card:hover, .cert-card:hover { border-color: var(--border-glow); transform: translateY(-5px); }
+        .research-icon, .cert-logo { width: 50px; height: 50px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 22px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+        .cert-logo { background: var(--gradient-primary); }
+        .cert-body h3 { font-size: 1.1rem; margin-bottom: 8px; }
+        .cert-issuer { color: var(--accent-secondary); font-weight: 600; margin-bottom: 10px; }
+        .cert-meta { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 8px; display: flex; gap: 8px; flex-wrap: wrap; }
+        .cert-id { font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-primary); background: rgba(124,111,247,0.08); padding: 3px 8px; border-radius: 4px; display: inline-block; }
 
         .contact-wrapper { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; }
         .contact-methods { display: flex; flex-direction: column; gap: 14px; }
@@ -238,12 +234,8 @@
 
         @media (max-width: 1024px) {
             .hero-container { flex-direction: column-reverse; text-align: center; }
-            .hero-content { max-width: 100%; display: flex; flex-direction: column; align-items: center; }
-            .hero-description { max-width: 100%; }
             .about-grid { grid-template-columns: 1fr; }
             .contact-wrapper { grid-template-columns: 1fr; }
-            .experience-timeline::before { left: 28px; }
-            .experience-item { gap: 20px; }
         }
         @media (max-width: 768px) {
             :root { --section-padding: 80px 0; }
@@ -254,8 +246,6 @@
             .hero-floating-card { display: none; }
             .experience-timeline::before { left: 22px; }
             .experience-item { flex-direction: column; gap: 16px; }
-            .exp-logo-wrapper { margin-bottom: 8px; }
-            .form-row { grid-template-columns: 1fr; }
             .timeline::before { left: 16px; }
             .timeline-item { padding-left: 54px; }
         }
@@ -273,7 +263,7 @@
             <a href="#" class="nav-logo">SG.</a>
             <button class="menu-toggle"><span></span><span></span><span></span></button>
             <div class="nav-links">
-                <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#research">Research</a><a href="#contact" class="nav-cta">Let's Talk</a>
+                <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#certifications">Certifications</a><a href="#research">Research</a><a href="#contact" class="nav-cta">Let's Talk</a>
             </div>
         </div>
     </nav>
@@ -314,7 +304,7 @@
             <div class="about-grid">
                 <div class="about-image-wrapper reveal" style="position:relative;">
                     <div class="about-image"><img src="https://avatars.githubusercontent.com/u/174195632?v=4&s=600" alt="Sangram"></div>
-                    <div class="about-stats-float"><div class="stat-item"><div class="stat-number">5+</div><div class="stat-label">Projects</div></div><div class="stat-item"><div class="stat-number">4</div><div class="stat-label">Internships</div></div><div class="stat-item"><div class="stat-number">3+</div><div class="stat-label">Research</div></div><div class="stat-item"><div class="stat-number">B.Tech</div><div class="stat-label">CSE Student</div></div></div>
+                    <div class="about-stats-float"><div class="stat-item"><div class="stat-number">5+</div><div class="stat-label">Projects</div></div><div class="stat-item"><div class="stat-number">4</div><div class="stat-label">Internships</div></div><div class="stat-item"><div class="stat-number">9</div><div class="stat-label">Certifications</div></div><div class="stat-item"><div class="stat-number">B.Tech</div><div class="stat-label">CSE Student</div></div></div>
                 </div>
                 <div class="about-content reveal">
                     <h3>From Code to Cognition — I Bridge the Gap</h3>
@@ -375,9 +365,14 @@
                     <div class="timeline-date">Aug 2023 – Jun 2027</div>
                     <h3 class="timeline-title">B.Tech in Computer Science and Engineering</h3>
                     <div class="timeline-subtitle">GIET University Gunupur</div>
-                    <div class="coursework"><p>📚 Relevant Coursework</p><ul><li>Data Structures & Algorithms</li><li>Database Management Systems</li><li>Cloud Computing</li><li>Object-Oriented Programming</li><li>Operating Systems</li></ul></div>
-                    <div class="highlights"><p>🏆 Academic Highlights</p><ul><li>Applied DBMS/SQL to build fintech IPO platform and automated reporting system for business process automation internship.</li><li>Earned multiple industry certifications (Microsoft Fabric, Oracle Analytics Cloud, SAP BDC, Altair ML) while carrying full course load.</li><li>Cultivated habit of connecting classroom fundamentals to tangible engineering outcomes, preparing for data engineering/ML internships.</li></ul></div>
-                    <div class="cert-tags"><span class="cert-tag">Microsoft Fabric Data Engineer</span><span class="cert-tag">Teradata DE (95/100)</span><span class="cert-tag">SAP Business Data Cloud</span></div>
+                    <p style="color:var(--text-secondary);">Relevant Coursework: Data Structures & Algorithms, Database Management Systems, Cloud Computing, OOP, Operating Systems.</p>
+                    <p style="margin-top:10px;font-weight:600;color:var(--text-primary);">Academic Highlights</p>
+                    <ul style="list-style:disc;padding-left:20px;color:var(--text-secondary);font-size:0.9rem;line-height:1.7;">
+                        <li>Applied DBMS/SQL to build fintech IPO platform and automated reporting system.</li>
+                        <li>Earned multiple industry certifications (Microsoft Fabric, Oracle Analytics Cloud, SAP BDC, Altair ML) while carrying full course load.</li>
+                        <li>Cultivated habit of connecting classroom fundamentals to tangible engineering outcomes, preparing for data engineering/ML internships.</li>
+                    </ul>
+                    <div class="cert-tags" style="margin-top:14px;"><span class="cert-tag">Microsoft Fabric Data Engineer</span><span class="cert-tag">Teradata DE (95/100)</span><span class="cert-tag">SAP Business Data Cloud</span></div>
                 </div></div>
                 <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content">
                     <div class="timeline-date">Sep 2021 – Mar 2023</div>
@@ -391,6 +386,104 @@
                     <div class="timeline-subtitle">Panchayat Nodal High School</div>
                     <p style="color:var(--text-secondary);">Built analytical and communication foundations. Skills: Communication, Problem Solving.</p>
                 </div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="certifications">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">// Certifications</span>
+                <h2 class="section-title">Industry <span class="highlight">Credentials</span></h2>
+                <p class="section-subtitle">Certifications validating my expertise across data engineering, cloud, and machine learning.</p>
+            </div>
+            <div class="certifications-grid">
+                <!-- Microsoft Fabric -->
+                <div class="cert-card reveal">
+                    <div class="cert-logo" style="background:linear-gradient(135deg,#0078D4,#00A4EF);">MS</div>
+                    <div class="cert-body">
+                        <h3>Microsoft Certified: Fabric Data Engineer Associate</h3>
+                        <p class="cert-issuer">Microsoft</p>
+                        <div class="cert-meta"><span>Issued May 2026</span> · <span>Expires May 2027</span></div>
+                        <span class="cert-id">Credential ID: 6B4E231E67CA56A</span>
+                    </div>
+                </div>
+                <!-- SAP -->
+                <div class="cert-card reveal">
+                    <div class="cert-logo" style="background:linear-gradient(135deg,#003366,#0066CC);">SAP</div>
+                    <div class="cert-body">
+                        <h3>SAP Certified - SAP Business Data Cloud</h3>
+                        <p class="cert-issuer">SAP</p>
+                        <div class="cert-meta"><span>Issued Apr 2026</span> · <span>Expires Apr 2027</span></div>
+                        <span class="cert-id">Credential ID: d1d7893b-7941-4cf2-8c4a-e60ce0ffb237</span>
+                    </div>
+                </div>
+                <!-- Altair Applications & Use Cases -->
+                <div class="cert-card reveal">
+                    <div class="cert-logo" style="background:linear-gradient(135deg,#F37021,#FF6B00);">AL</div>
+                    <div class="cert-body">
+                        <h3>Applications & Use Cases Professional</h3>
+                        <p class="cert-issuer">Altair</p>
+                        <div class="cert-meta"><span>Issued Mar 2026</span></div>
+                    </div>
+                </div>
+                <!-- Confluent -->
+                <div class="cert-card reveal">
+                    <div class="cert-logo" style="background:linear-gradient(135deg,#003A63,#0088CE);">CN</div>
+                    <div class="cert-body">
+                        <h3>Data Streaming Engineer Foundations</h3>
+                        <p class="cert-issuer">Confluent</p>
+                        <div class="cert-meta"><span>Issued Mar 2026</span></div>
+                        <span class="cert-id">Credential ID: 176355951</span>
+                    </div>
+                </div>
+                <!-- Oracle Analytics -->
+                <div class="cert-card reveal">
+                    <div class="cert-logo" style="background:linear-gradient(135deg,#C74634,#E74C3C);">OR</div>
+                    <div class="cert-body">
+                        <h3>Oracle Analytics Cloud 2025 Certified Professional</h3>
+                        <p class="cert-issuer">Oracle</p>
+                        <div class="cert-meta"><span>Issued Oct 2025</span> · <span>Expires Oct 2027</span></div>
+                        <span class="cert-id">Credential ID: 100414001OCIEA25OCP</span>
+                    </div>
+                </div>
+                <!-- Symphony Bot Developer -->
+                <div class="cert-card reveal">
+                    <div class="cert-logo" style="background:linear-gradient(135deg,#1E90FF,#00BFFF);">SY</div>
+                    <div class="cert-body">
+                        <h3>Certified Bot Developer (Python)</h3>
+                        <p class="cert-issuer">Symphony</p>
+                        <div class="cert-meta"><span>Issued Mar 2025</span></div>
+                    </div>
+                </div>
+                <!-- Altair ML Professional -->
+                <div class="cert-card reveal">
+                    <div class="cert-logo" style="background:linear-gradient(135deg,#8A2BE2,#9400D3);">AL</div>
+                    <div class="cert-body">
+                        <h3>Machine Learning Professional Certification</h3>
+                        <p class="cert-issuer">Altair</p>
+                        <div class="cert-meta"><span>Issued Sep 2025</span></div>
+                    </div>
+                </div>
+                <!-- Altair Data Engineering -->
+                <div class="cert-card reveal">
+                    <div class="cert-logo" style="background:linear-gradient(135deg,#DC143C,#8B0000);">AL</div>
+                    <div class="cert-body">
+                        <h3>Data Engineering Professional Certification</h3>
+                        <p class="cert-issuer">Altair</p>
+                        <div class="cert-meta"><span>Issued Aug 2025</span></div>
+                    </div>
+                </div>
+                <!-- Symphony Associate -->
+                <div class="cert-card reveal">
+                    <div class="cert-logo" style="background:linear-gradient(135deg,#00CED1,#48D1CC);">SY</div>
+                    <div class="cert-body">
+                        <h3>Symphony Certified Associate Developer</h3>
+                        <p class="cert-issuer">Symphony</p>
+                        <div class="cert-meta"><span>Issued Jan 2025</span></div>
+                        <span class="cert-id">Credential ID: 62d4c2db-0b3b-4dda-bce0-94d7aa65ccb9</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -441,7 +534,7 @@
     <script>
         (function() {
             const dot=document.getElementById('cursor-dot'), ring=document.getElementById('cursor-ring');
-            if(dot&&ring&&window.innerWidth>768){let mx=0,my=0,cx=0,cy=0;document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});document.querySelectorAll('a,button,.btn-primary,.btn-secondary,.form-submit,.project-card,.skill-category,.research-card,.contact-method,.social-link,.nav-cta,.exp-card').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('hover'));el.addEventListener('mouseleave',()=>ring.classList.remove('hover'))});function anim(){cx+=(mx-cx)*0.2;cy+=(my-cy)*0.2;dot.style.left=mx+'px';dot.style.top=my+'px';ring.style.left=cx-19+'px';ring.style.top=cy-19+'px';requestAnimationFrame(anim)}anim();}
+            if(dot&&ring&&window.innerWidth>768){let mx=0,my=0,cx=0,cy=0;document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});document.querySelectorAll('a,button,.btn-primary,.btn-secondary,.form-submit,.project-card,.skill-category,.research-card,.contact-method,.social-link,.nav-cta,.exp-card,.cert-card').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('hover'));el.addEventListener('mouseleave',()=>ring.classList.remove('hover'))});function anim(){cx+=(mx-cx)*0.2;cy+=(my-cy)*0.2;dot.style.left=mx+'px';dot.style.top=my+'px';ring.style.left=cx-19+'px';ring.style.top=cy-19+'px';requestAnimationFrame(anim)}anim();}
             const canvas=document.getElementById('particles-canvas'),ctx=canvas.getContext('2d');let particles=[],mouse={x:null,y:null,radius:160};
             function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}resize();window.addEventListener('resize',resize);document.addEventListener('mousemove',e=>{mouse.x=e.x;mouse.y=e.y});
             class Particle{constructor(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.size=Math.random()*1.8+0.5;this.speedX=(Math.random()-0.5)*0.35;this.speedY=(Math.random()-0.5)*0.35;this.opacity=Math.random()*0.6+0.15;this.pulseSpeed=Math.random()*0.02+0.005;this.pulseOffset=Math.random()*Math.PI*2}update(t){this.x+=this.speedX;this.y+=this.speedY;if(mouse.x){const dx=mouse.x-this.x,dy=mouse.y-this.y;const dist=Math.sqrt(dx*dx+dy*dy);if(dist<mouse.radius){const force=(mouse.radius-dist)/mouse.radius;this.x-=dx*force*0.025;this.y-=dy*force*0.025}}if(this.x>canvas.width)this.x=0;if(this.x<0)this.x=canvas.width;if(this.y>canvas.height)this.y=0;if(this.y<0)this.y=canvas.height;this.currentOpacity=this.opacity+Math.sin(t*this.pulseSpeed+this.pulseOffset)*0.2}draw(){ctx.fillStyle=`rgba(124,111,247,${Math.max(0.05,this.currentOpacity)})`;ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fill()}}
