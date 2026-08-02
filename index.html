@@ -24,6 +24,13 @@
       --serif: 'Fraunces', Georgia, serif;
       --sans: 'Inter', system-ui, sans-serif;
       --grad: linear-gradient(90deg, #c9a86a 0%, #e0c896 100%);
+      --glass: rgba(255,255,255,0.08);
+      --glass-blur: blur(18px);
+      --shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+      --radius: 18px;
+      --radius-sm: 8px;
+      --radius-lg: 32px;
+      --transition: .3s cubic-bezier(.4,0,.2,1);
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
@@ -220,7 +227,226 @@
     <a href="#contact" class="nav-cta">Get in touch</a>
   </div>
 </nav>
-<!-- ...rest of the code is already above... -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-inner">
+    <div class="eyebrow reveal"><span class="rule"></span><span class="status-dot"></span> Open to Internship &amp; Full-time</div>
+    <h1 class="reveal">Sangram Keshari Ghose<br><span class="line2">Data Engineering &amp; Analytics.</span></h1>
+    <div class="typed reveal"><span id="typed"></span><span class="bar"></span></div>
+    <p class="lead reveal">I turn raw, large-scale data into reliable intelligence — engineering pipelines, building forecasting models, and shipping analytics that drive real business decisions.</p>
+    <div class="hero-cta reveal">
+      <a href="#" class="btn btn-primary" onclick="alert('Attach your resume file link here');return false;">Download Résumé</a>
+      <a href="#contact" class="btn btn-ghost">Let's talk →</a>
+    </div>
+    <div class="hero-socials reveal">
+      <a href="mailto:sangramkesharighose@gmail.com">Email</a>
+      <a href="tel:+918456841232">+91 8456841232</a>
+      <a href="https://www.linkedin.com/in/sangramghose/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/sangramghose" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span class="l"></span> Scroll to explore</div>
+</header>
+<div class="marquee-wrap">
+  <div class="mtrack" id="mtrack"></div>
+</div>
+<section id="highlights">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="kicker"><span class="rule"></span> Featured Highlights</div>
+      <h2>A snapshot of my <span class="italic gold">biggest wins.</span></h2>
+      <p>Internships at industry leaders, cloud &amp; AI certifications, and a flagship project.</p>
+    </div>
+    <div class="hl-grid">
+      <div class="hl reveal"><span class="idx">01 —</span><span class="arrow">↗</span><h3>Data &amp; Analytics Intern</h3><p class="org">Frost &amp; Sullivan</p><p>Market intelligence, SARIMAX &amp; Prophet forecasting, and EDA across industry sectors.</p><span class="kind">Internship</span></div>
+      <div class="hl reveal"><span class="idx">02 —</span><span class="arrow">↗</span><h3>Intern</h3><p class="org">Infinite Computer Solutions</p><span class="kind">Internship</span></div>
+      <div class="hl reveal"><span class="idx">03 —</span><span class="arrow">↗</span><h3>Intern</h3><p class="org">Zoho</p><span class="kind">Internship</span></div>
+      <div class="hl reveal"><span class="idx">04 —</span><span class="arrow">↗</span><h3>Agentic AI Builder</h3><p class="org">Nebius · Associate</p><span class="kind">Certification</span></div>
+      <div class="hl reveal"><span class="idx">05 —</span><span class="arrow">↗</span><h3>Fabric Data Engineer</h3><p class="org">Microsoft · Associate</p><span class="kind">Certification</span></div>
+      <div class="hl reveal"><span class="idx">06 —</span><span class="arrow">↗</span><h3>Associate Cloud Engineer</h3><p class="org">Google Cloud</p><span class="kind">Certification</span></div>
+      <div class="hl reveal"><span class="idx">★</span><span class="arrow">↗</span><h3>Deploytual</h3><p class="org">Deploy intelligence. Any data. Anywhere.</p><span class="kind">Flagship Project</span></div>
+    </div>
+  </div>
+</section>
+<section id="about" style="background:var(--bg-soft);">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="kicker"><span class="rule"></span> About Me</div>
+      <h2>The story behind <span class="gold italic">the data</span></h2>
+      <p>My journey, focus areas, and where I'm headed next.</p>
+    </div>
+    <div class="about">
+      <div>
+        <div class="lede reveal">A <span class="gold">Data Engineering &amp; Analytics</span> enthusiast building hands-on experience across leading organizations.</div>
+        <p class="body reveal">Through internships at <b>Frost &amp; Sullivan</b>, <b>Infinite Computer Solutions</b>, and <b>Zoho</b>, I've worked on forecasting, data pipelines, and analytics that support real business decisions. I love the moment messy data becomes a clear, confident answer.</p>
+      </div>
+      <div>
+        <div class="detail-block reveal">
+          <div class="label"><span class="rule"></span> Specialization</div>
+          <div class="tags"><span class="tag">Data Engineering &amp; Analytics Intern</span></div>
+        </div>
+        <div class="detail-block reveal">
+          <div class="label"><span class="rule"></span> Industries I Enjoy</div>
+          <div class="tags">
+            <span class="tag">Market Intelligence</span>
+            <span class="tag">Consulting</span>
+            <span class="tag">Technology &amp; SaaS</span>
+          </div>
+        </div>
+        <div class="detail-block reveal">
+          <div class="label"><span class="rule"></span> Technologies I Love</div>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">SQL</span>
+            <span class="tag">SARIMAX</span>
+            <span class="tag">Prophet</span>
+            <span class="tag">Microsoft Fabric</span>
+            <span class="tag">Google Cloud</span>
+          </div>
+        </div>
+        <div class="detail-block goal reveal">
+          <div class="label"><span class="rule"></span> Future Goals</div>
+          <div class="tags">
+            <span class="tag">Data Engineer</span>
+            <span class="tag">AI Data Engineer</span>
+            <span class="tag">Machine Learning Engineer</span>
+            <span class="tag">Data Consultant</span>
+            <span class="tag">Data Analyst</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="metrics">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="kicker"><span class="rule"></span> Professional Metrics</div>
+      <h2>Impact <span class="gold italic">by the numbers</span></h2>
+      <p>Real, measurable outcomes from my internships and projects.</p>
+    </div>
+    <div class="metrics">
+      <div class="metric reveal"><div class="num" data-target="3">0</div><div class="lbl">Internships Completed</div></div>
+      <div class="metric reveal"><div class="num" data-target="2">0</div><div class="lbl">Industry Sectors Analyzed</div></div>
+      <div class="metric reveal"><div class="num" data-target="10" data-suffix="+">0</div><div class="lbl">Forecasting Scenarios Validated</div></div>
+      <div class="metric reveal"><div class="num" data-target="3">0</div><div class="lbl">Cloud &amp; AI Certifications</div></div>
+    </div>
+  </div>
+</section>
+<section id="experience" style="background:var(--bg-soft);">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="kicker"><span class="rule"></span> Professional Experience</div>
+      <h2>Where I've <span class="gold italic">worked &amp; built</span></h2>
+      <p>A timeline of internships and the impact delivered.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl reveal">
+        <div>
+          <div class="when">Jun 2025 – Aug 2025</div>
+          <div class="where">Mumbai, Maharashtra, India</div>
+        </div>
+        <div>
+          <div class="role">Data &amp; Analytics Intern</div>
+          <div class="co">Frost &amp; Sullivan</div>
+          <ul>
+            <li>Analyzed large-scale industry datasets using Python, Pandas, and SQL, supporting market intelligence, trend analysis, and demand forecasting across 2 industry sectors.</li>
+            <li>Assisted in developing SARIMAX and Prophet forecasting models while performing data cleaning, feature engineering, and exploratory data analysis (EDA) to improve the quality and reliability of forecasting datasets.</li>
+            <li>Evaluated forecasting models using RMSE, MAE, and MAPE, contributing to the validation of 10+ forecasting scenarios and preparing analytical outputs for internal research reports and consulting deliverables.</li>
+            <li>Collaborated with a 6-member analytics team to interpret market trends, prepare business reports, and translate analytical findings into data-driven insights that supported client presentations.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl reveal">
+        <div>
+          <div class="when">Add dates</div>
+          <div class="where">Add location</div>
+        </div>
+        <div>
+          <div class="role">Intern</div>
+          <div class="co">Infinite Computer Solutions</div>
+          <ul>
+            <li>Add your key responsibilities and quantified achievements here.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl reveal">
+        <div>
+          <div class="when">Add dates</div>
+          <div class="where">Add location</div>
+        </div>
+        <div>
+          <div class="role">Intern</div>
+          <div class="co">Zoho</div>
+          <ul>
+            <li>Add your key responsibilities and quantified achievements here.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="projects">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="kicker"><span class="rule"></span> Featured Projects</div>
+      <h2>Things I've <span class="gold italic">built</span></h2>
+      <p>Flagship work that showcases my technical range.</p>
+    </div>
+    <div class="proj-grid">
+      <div class="pcard reveal">
+        <span class="ptag">Flagship Project</span>
+        <h3>Deploytual</h3>
+        <div class="tagline">Deploy intelligence. Any data. Anywhere.</div>
+        <p>A platform to deploy intelligent data workflows and models across any data source and environment — bringing analytics and AI to where the data lives.</p>
+        <div class="stack">
+          <span>Python</span><span>SQL</span><span>ML</span><span>Cloud</span>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <span class="ptag">Data / Forecasting</span>
+        <h3>Market Forecasting Suite</h3>
+        <div class="tagline">Turning trends into confident predictions.</div>
+        <p>Time-series forecasting workflows built with SARIMAX and Prophet, validated with RMSE, MAE, and MAPE across multiple industry demand scenarios.</p>
+        <div class="stack">
+          <span>Python</span><span>Pandas</span><span>SARIMAX</span><span>Prophet</span>
+        </div>
+      </div>
+      <div class="pcard reveal">
+        <span class="ptag">Analytics</span>
+        <h3>Insights &amp; EDA Toolkit</h3>
+        <div class="tagline">From messy data to clear answers.</div>
+        <p>Reusable exploratory data analysis and reporting utilities for cleaning, feature engineering, and translating raw datasets into decision-ready insights.</p>
+        <div class="stack">
+          <span>Python</span><span>SQL</span><span>Power BI</span><span>EDA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact" style="background:var(--bg-soft);">
+  <div class="container">
+    <div class="contact-wrap reveal">
+      <h2>Let's build something <span class="gold italic">data-driven</span></h2>
+      <p>I'm open to internships, full-time roles, and collaborations. Whether you have a project, a question, or an opportunity — my inbox is always open.</p>
+      <div class="contact-cta">
+        <a href="mailto:sangramkesharighose@gmail.com" class="btn btn-primary">✉️ sangramkesharighose@gmail.com</a>
+        <a href="tel:+918456841232" class="btn btn-ghost">📞 +91 8456841232</a>
+      </div>
+      <div class="contact-meta">
+        <a href="https://www.linkedin.com/in/sangramghose/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/sangramghose" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="inner">
+    <div class="logo">Sangram<b>.</b></div>
+    <div>© 2026 Sangram Keshari Ghose · Data. Intelligence. Impact.</div>
+  </div>
+</footer>
 <script>
 window.addEventListener('scroll',()=>{
   const h=document.documentElement;
