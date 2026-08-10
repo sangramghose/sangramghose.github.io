@@ -455,7 +455,7 @@
       animation: pulse 2s ease-in-out infinite;
     }
 
-    /* ========== PROJECTS ========== */
+    /* PROJECTS */
     .projects-list {
       display: flex;
       flex-direction: column;
@@ -475,8 +475,6 @@
       transform: translateY(-8px);
       box-shadow: 0 30px 60px -15px rgba(0,0,0,0.5), 0 0 40px -10px rgba(56, 189, 248, 0.15);
     }
-
-    /* Project Screenshot */
     .project-preview {
       width: 100%;
       overflow: hidden;
@@ -501,7 +499,6 @@
       background: linear-gradient(to top, rgba(15,23,42,0.6), transparent);
       pointer-events: none;
     }
-
     .project-hero {
       background: linear-gradient(135deg, rgba(56,189,248,0.12) 0%, rgba(129,140,248,0.1) 50%, rgba(52,211,153,0.08) 100%);
       padding: 2rem 2.25rem 1.75rem;
@@ -650,7 +647,7 @@
       color: var(--accent);
     }
 
-    /* CERTIFICATIONS */
+    /* ========== CERTIFICATIONS (UPDATED WITH BADGES) ========== */
     .certs-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -683,12 +680,27 @@
       box-shadow: 0 20px 50px rgba(0,0,0,0.4);
     }
     .cert-card:hover::before { opacity: 1; }
+
+    .cert-badge-img {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      margin-bottom: 1.1rem;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      padding: 6px;
+      transition: transform 0.35s;
+    }
+    .cert-card:hover .cert-badge-img {
+      transform: scale(1.08);
+    }
+
     .cert-header {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       gap: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
     .cert-issuer {
       font-size: 0.8rem;
@@ -1125,14 +1137,10 @@
     </div>
 
     <div class="projects-list">
-
-      <!-- Deploytual -->
       <article class="project-card reveal">
-        <!-- Screenshot Preview -->
         <div class="project-preview">
-          <img src="deploytual-preview.png" alt="Deploytual Homepage - Query any dataset with AI. Instantly." loading="lazy" />
+          <img src="deploytual-preview.png" alt="Deploytual Homepage" loading="lazy" />
         </div>
-
         <div class="project-hero">
           <div class="project-badge-row">
             <span class="project-badge live">● Live</span>
@@ -1141,7 +1149,7 @@
           <h3 class="project-title">Deploytual</h3>
           <p class="project-tagline">Deploy intelligence. Any data. Anywhere.</p>
           <p class="project-desc">
-            An AI-powered analytics platform that unifies data connectivity, natural language querying, automated machine learning, and one-click reporting into a single, deployable engine — ready to be dropped into any environment.
+            An AI-powered analytics platform that unifies data connectivity, natural language querying, automated machine learning, and one-click reporting into a single, deployable engine.
           </p>
         </div>
         <div class="project-body">
@@ -1157,28 +1165,28 @@
               <div class="feature-icon">🤖</div>
               <div class="feature-text">
                 <h4>AutoML Engine</h4>
-                <p>Anomaly detection (Isolation Forest), time-series forecasting (Prophet), and clustering — zero ML expertise required.</p>
+                <p>Anomaly detection, time-series forecasting (Prophet), and clustering — zero ML expertise required.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">🔍</div>
               <div class="feature-text">
                 <h4>AI Data Cleaning Studio</h4>
-                <p>Missing value alerts, outlier detection, formatting issues, and one-click fixes.</p>
+                <p>Missing value alerts, outlier detection, and one-click fixes.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">🧠</div>
               <div class="feature-text">
                 <h4>Explainable AI + Storyteller</h4>
-                <p>Every answer reveals the exact Pandas/SQL code. Built-in text-to-speech reads insights aloud.</p>
+                <p>Every answer reveals the exact code. Built-in text-to-speech reads insights aloud.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">📄</div>
               <div class="feature-text">
                 <h4>One-Click Executive Reports</h4>
-                <p>Boardroom-ready PDFs with AI-written summaries, charts, anomaly highlights, and forecasts.</p>
+                <p>Boardroom-ready PDFs with AI-written summaries, charts, and forecasts.</p>
               </div>
             </div>
             <div class="feature-item">
@@ -1191,24 +1199,16 @@
           </div>
           <div class="project-stack">
             <span>Python</span><span>FastAPI</span><span>Pandas</span><span>scikit-learn</span><span>Prophet</span>
-            <span>Chart.js</span><span>Docker</span><span>Kubernetes</span><span>Helm</span>
-            <span>JWT + OAuth</span><span>PostgreSQL</span><span>MongoDB</span><span>WebSocket</span><span>CI/CD</span>
+            <span>Docker</span><span>Kubernetes</span><span>Helm</span><span>JWT + OAuth</span><span>CI/CD</span>
           </div>
           <div class="project-actions">
-            <a href="https://deploytual.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Live Demo
-            </a>
-            <a href="https://github.com/sangramghose/Deploytual" target="_blank" rel="noopener" class="btn btn-outline">
-              <svg width="16" height="16" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-              View on GitHub
-            </a>
+            <a href="https://deploytual.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary">Live Demo</a>
+            <a href="https://github.com/sangramghose/Deploytual" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
             <a href="https://deploytual.onrender.com/docs" target="_blank" rel="noopener" class="btn btn-outline">API Docs</a>
           </div>
         </div>
       </article>
 
-      <!-- WorkforceIQ -->
       <article class="project-card reveal">
         <div class="project-hero">
           <div class="project-badge-row">
@@ -1217,7 +1217,7 @@
           <h3 class="project-title">WorkforceIQ</h3>
           <p class="project-tagline">Workforce Analytics Platform</p>
           <p class="project-desc">
-            A full analytics pipeline — from raw data to predictive models to dashboards people actually open. Engineered end-to-end ingestion and scoring of 50K+ employee records and 10K call transcripts, powering attrition prediction, employee segmentation, and sentiment analysis.
+            End-to-end analytics pipeline ingesting 50K+ employee records and 10K call transcripts with attrition prediction, clustering, and sentiment analysis.
           </p>
         </div>
         <div class="project-body">
@@ -1226,59 +1226,53 @@
               <div class="feature-icon">📉</div>
               <div class="feature-text">
                 <h4>Attrition Prediction</h4>
-                <p>Random Forest model on 50K employee records achieving 85%+ accuracy, flagging high-risk employees before resignation.</p>
+                <p>Random Forest on 50K records achieving 85%+ accuracy.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">🧩</div>
               <div class="feature-text">
                 <h4>Employee Segmentation</h4>
-                <p>K-Means clustering revealed 4 behavioral personas — including a high-risk, low-satisfaction segment invisible in raw data.</p>
+                <p>K-Means clustering revealed 4 behavioral personas including a high-risk segment.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">🗣️</div>
               <div class="feature-text">
                 <h4>Call Sentiment Analysis</h4>
-                <p>VADER NLP scoring of 10K call transcripts with ~92% label agreement, turning qualitative feedback into trackable metrics.</p>
+                <p>VADER scoring of 10K transcripts with ~92% label agreement.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">📊</div>
               <div class="feature-text">
                 <h4>Interactive Dashboards</h4>
-                <p>Tableau workbooks + self-contained Plotly HTML dashboards — zero server required, open in any browser.</p>
+                <p>Tableau + self-contained Plotly HTML dashboards.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">⚡</div>
               <div class="feature-text">
                 <h4>Automated Reporting</h4>
-                <p>Power Automate workflow emailed stakeholder summaries, cutting manual HR reporting turnaround by 60%.</p>
+                <p>Power Automate cut manual HR reporting turnaround by 60%.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">🔗</div>
               <div class="feature-text">
                 <h4>Modular Pipeline</h4>
-                <p>Every stage writes to disk — cleaning, models, and dashboards can be re-run or swapped independently.</p>
+                <p>Every stage writes to disk — independent and re-runnable.</p>
               </div>
             </div>
           </div>
           <div class="project-stack">
-            <span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>NLTK (VADER)</span>
-            <span>Random Forest</span><span>K-Means</span><span>Tableau</span><span>Plotly</span>
-            <span>Power Automate</span><span>SQL</span>
+            <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>NLTK</span><span>Tableau</span><span>Plotly</span><span>Power Automate</span>
           </div>
           <div class="project-actions">
-            <a href="https://github.com/sangramghose/Workforce-and-Industry-Trend-Analyzer" target="_blank" rel="noopener" class="btn btn-primary">
-              <svg width="16" height="16" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-              View on GitHub
-            </a>
+            <a href="https://github.com/sangramghose/Workforce-and-Industry-Trend-Analyzer" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub</a>
           </div>
         </div>
       </article>
-
     </div>
   </section>
 
@@ -1289,7 +1283,6 @@
       <h2 class="section-title">Academic Background</h2>
       <p class="section-desc">Building a strong foundation in Computer Science and Engineering.</p>
     </div>
-
     <article class="edu-card reveal">
       <img src="giet-logo.png" alt="GIET University" class="edu-logo" />
       <div class="edu-content">
@@ -1316,7 +1309,10 @@
     </div>
 
     <div class="certs-grid">
+
+      <!-- Google Cloud -->
       <article class="cert-card reveal">
+        <img src="gcp-badge.png" alt="Google Cloud Associate Cloud Engineer" class="cert-badge-img" />
         <div class="cert-header">
           <span class="cert-issuer">Google Cloud</span>
           <span class="cert-badge">Professional</span>
@@ -1328,7 +1324,7 @@
           <span>Valid until: July 24, 2029</span>
         </div>
         <div class="cert-skills">
-          <span>GCP</span><span>Compute Engine</span><span>GKE</span><span>Cloud Storage</span><span>IAM</span><span>Networking</span><span>Cloud Security</span>
+          <span>GCP</span><span>Compute Engine</span><span>GKE</span><span>Cloud Storage</span><span>IAM</span><span>Networking</span>
         </div>
         <a href="https://www.credly.com/badges/00aa87ff-d48f-4b9c-9282-800a1d5a45ef/public_url" target="_blank" rel="noopener" class="cert-link">
           Verify Credential
@@ -1336,7 +1332,9 @@
         </a>
       </article>
 
+      <!-- Nebius -->
       <article class="cert-card reveal">
+        <img src="nebius-badge.png" alt="Nebius Agentic AI Builder" class="cert-badge-img" />
         <div class="cert-header">
           <span class="cert-issuer">Nebius Academy</span>
           <span class="cert-badge">Professional</span>
@@ -1347,7 +1345,7 @@
           <span>Issued: July 23, 2026</span>
         </div>
         <div class="cert-skills">
-          <span>AI Agents</span><span>Generative AI</span><span>RAG</span><span>AI Workflows</span><span>AI Applications</span>
+          <span>AI Agents</span><span>Generative AI</span><span>RAG</span><span>AI Workflows</span>
         </div>
         <a href="https://www.credly.com/badges/5d0821dd-6916-48d6-b3a8-99170ca85762/public_url" target="_blank" rel="noopener" class="cert-link">
           Verify Credential
@@ -1355,7 +1353,9 @@
         </a>
       </article>
 
+      <!-- Microsoft Fabric -->
       <article class="cert-card reveal">
+        <img src="fabric-badge.png" alt="Microsoft Fabric Data Engineer Associate" class="cert-badge-img" />
         <div class="cert-header">
           <span class="cert-issuer">Microsoft</span>
           <span class="cert-badge">Professional</span>
@@ -1367,7 +1367,7 @@
           <span>Valid until: May 12, 2027</span>
         </div>
         <div class="cert-skills">
-          <span>Microsoft Fabric</span><span>Data Engineering</span><span>Data Ingestion</span><span>Data Transformation</span><span>Analytics</span><span>Performance Optimization</span>
+          <span>Microsoft Fabric</span><span>Data Engineering</span><span>Data Ingestion</span><span>Data Transformation</span>
         </div>
         <a href="https://learn.microsoft.com/en-us/users/sangramkesharighose-1289/credentials/6b4e231e67ca56a" target="_blank" rel="noopener" class="cert-link">
           Verify Credential
@@ -1375,19 +1375,21 @@
         </a>
       </article>
 
+      <!-- SAP -->
       <article class="cert-card reveal">
+        <img src="sap-badge.png" alt="SAP Business Data Cloud" class="cert-badge-img" />
         <div class="cert-header">
           <span class="cert-issuer">SAP</span>
           <span class="cert-badge">Professional</span>
         </div>
         <h3 class="cert-title">SAP Business Data Cloud</h3>
-        <p class="cert-desc">Certified in SAP Business Data Cloud, with foundational expertise in analytics, data management, and enterprise data solutions.</p>
+        <p class="cert-desc">Certified in SAP Business Data Cloud with foundational expertise in analytics, data management, and enterprise data solutions.</p>
         <div class="cert-meta">
           <span>Issued: April 29, 2026</span>
           <span>Valid until: April 30, 2027</span>
         </div>
         <div class="cert-skills">
-          <span>SAP Business Data Cloud</span><span>Analytics</span><span>Database Management</span><span>Data Storytelling</span>
+          <span>SAP Business Data Cloud</span><span>Analytics</span><span>Database Management</span>
         </div>
         <a href="https://www.credly.com/badges/d1d7893b-7941-4cf2-8c4a-e60ce0ffb237/public_url" target="_blank" rel="noopener" class="cert-link">
           Verify Credential
@@ -1395,19 +1397,21 @@
         </a>
       </article>
 
+      <!-- Oracle -->
       <article class="cert-card reveal">
+        <img src="oracle-badge.png" alt="Oracle Analytics Cloud 2025" class="cert-badge-img" />
         <div class="cert-header">
           <span class="cert-issuer">Oracle</span>
           <span class="cert-badge">Professional</span>
         </div>
         <h3 class="cert-title">Oracle Analytics Cloud 2025 Certified Professional</h3>
-        <p class="cert-desc">Certified in Oracle Analytics Cloud, with expertise in data modeling, visualization, advanced analytics, and machine learning.</p>
+        <p class="cert-desc">Certified in Oracle Analytics Cloud with expertise in data modeling, visualization, advanced analytics, and machine learning.</p>
         <div class="cert-meta">
           <span>Issued: October 8, 2025</span>
           <span>Valid until: October 8, 2027</span>
         </div>
         <div class="cert-skills">
-          <span>Oracle Analytics Cloud</span><span>Data Modeling</span><span>Data Visualization</span><span>Advanced Analytics</span><span>Machine Learning</span><span>BI Dashboards</span>
+          <span>Oracle Analytics Cloud</span><span>Data Modeling</span><span>Data Visualization</span><span>Machine Learning</span>
         </div>
         <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=0BB79A43527A363EEFEE1781A86FB0ABE3578255543741933149A1E845EDE800" target="_blank" rel="noopener" class="cert-link">
           Verify Credential
@@ -1415,7 +1419,9 @@
         </a>
       </article>
 
+      <!-- Machine Learning Professional -->
       <article class="cert-card reveal">
+        <img src="ml-badge.png" alt="Machine Learning Professional" class="cert-badge-img" />
         <div class="cert-header">
           <span class="cert-issuer">Altair Engineering (RapidMiner)</span>
           <span class="cert-badge">Professional</span>
@@ -1426,7 +1432,7 @@
           <span>Issued: September 6, 2025</span>
         </div>
         <div class="cert-skills">
-          <span>Machine Learning</span><span>Classification</span><span>Regression</span><span>Clustering</span><span>Feature Engineering</span><span>Association Rules</span>
+          <span>Machine Learning</span><span>Classification</span><span>Regression</span><span>Clustering</span>
         </div>
         <a href="https://openbadgefactory.com/obv3/credentials/dc5642318198228c654ed0695527511075261bff" target="_blank" rel="noopener" class="cert-link">
           Verify Credential
@@ -1434,7 +1440,9 @@
         </a>
       </article>
 
+      <!-- Data Engineering Professional -->
       <article class="cert-card reveal">
+        <img src="data-eng-badge.png" alt="Data Engineering Professional" class="cert-badge-img" />
         <div class="cert-header">
           <span class="cert-issuer">Altair Engineering (RapidMiner)</span>
           <span class="cert-badge">Professional</span>
@@ -1445,13 +1453,14 @@
           <span>Issued: August 18, 2025</span>
         </div>
         <div class="cert-skills">
-          <span>Data Engineering</span><span>Data Access</span><span>Data Transformation</span><span>Data Preparation</span><span>Pivot Tables</span><span>Text Processing</span>
+          <span>Data Engineering</span><span>Data Access</span><span>Data Transformation</span><span>Data Preparation</span>
         </div>
         <a href="https://openbadgefactory.com/obv3/credentials/2ff63de886d187a4ff7a27ae751c75f6ab3656ff" target="_blank" rel="noopener" class="cert-link">
           Verify Credential
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </a>
       </article>
+
     </div>
   </section>
 
