@@ -652,7 +652,7 @@
       box-shadow: 0 0 8px var(--accent-glow);
     }
 
-    /* ========== EXPERIENCE (IMPRESSIVE) ========== */
+    /* ========== EXPERIENCE ========== */
     .experience-list {
       display: flex;
       flex-direction: column;
@@ -660,7 +660,6 @@
       position: relative;
     }
 
-    /* Timeline line */
     .experience-list::before {
       content: "";
       position: absolute;
@@ -688,7 +687,6 @@
       transform: translateY(-4px);
     }
 
-    /* Timeline dot */
     .exp-card::before {
       content: "";
       position: absolute;
@@ -739,7 +737,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: var(--accent);
       border: 1px solid var(--border);
@@ -1156,6 +1154,39 @@
 
     <div class="experience-list">
 
+      <!-- Frost & Sullivan (Most Recent) -->
+      <article class="exp-card reveal">
+        <div class="exp-header">
+          <div class="exp-company-block">
+            <div class="exp-logo-placeholder">F&S</div>
+            <div>
+              <div class="exp-role">Data & Analytics Intern</div>
+              <div class="exp-company">Frost & Sullivan</div>
+            </div>
+          </div>
+          <div class="exp-meta">
+            <span class="duration">Jun 2025 – Aug 2025</span>
+            <span>Mumbai, Maharashtra, India</span>
+          </div>
+        </div>
+
+        <ul class="exp-bullets">
+          <li>Analyzed large-scale industry datasets using Python, Pandas, and SQL, supporting market intelligence, trend analysis, and demand forecasting across 2 industry sectors.</li>
+          <li>Assisted in developing SARIMAX and Prophet forecasting models while performing data cleaning, feature engineering, and exploratory data analysis (EDA) to improve the quality and reliability of forecasting datasets.</li>
+          <li>Evaluated forecasting models using RMSE, MAE, and MAPE, contributing to the validation of 10+ forecasting scenarios and preparing analytical outputs for internal research reports and consulting deliverables.</li>
+          <li>Collaborated with a 6-member analytics team to interpret market trends, prepare business reports, and translate analytical findings into data-driven insights that supported client presentations and strategic research projects.</li>
+        </ul>
+
+        <div class="exp-stack">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Machine Learning</span>
+          <span>Data Analysis</span>
+          <span>Exploratory Data Analysis</span>
+          <span>Time Series Forecasting</span>
+        </div>
+      </article>
+
       <!-- Infinite Computer Solutions -->
       <article class="exp-card reveal">
         <div class="exp-header">
@@ -1191,36 +1222,37 @@
         </div>
       </article>
 
-      <!-- Frost & Sullivan -->
+      <!-- Zoho -->
       <article class="exp-card reveal">
         <div class="exp-header">
           <div class="exp-company-block">
-            <div class="exp-logo-placeholder">F&S</div>
+            <img src="zoho-logo.png" alt="Zoho" class="exp-logo" />
             <div>
-              <div class="exp-role">Data & Analytics Intern</div>
-              <div class="exp-company">Frost & Sullivan</div>
+              <div class="exp-role">Summer Intern</div>
+              <div class="exp-company">Zoho · Product: Zoho DataPrep 2.0</div>
             </div>
           </div>
           <div class="exp-meta">
-            <span class="duration">Jun 2025 – Aug 2025</span>
-            <span>Mumbai, Maharashtra, India</span>
+            <span class="duration">Jun 2024 – Jul 2024</span>
+            <span>Chennai, Tamil Nadu, India</span>
           </div>
         </div>
 
         <ul class="exp-bullets">
-          <li>Analyzed large-scale industry datasets using Python, Pandas, and SQL, supporting market intelligence, trend analysis, and demand forecasting across 2 industry sectors.</li>
-          <li>Assisted in developing SARIMAX and Prophet forecasting models while performing data cleaning, feature engineering, and exploratory data analysis (EDA) to improve the quality and reliability of forecasting datasets.</li>
-          <li>Evaluated forecasting models using RMSE, MAE, and MAPE, contributing to the validation of 10+ forecasting scenarios and preparing analytical outputs for internal research reports and consulting deliverables.</li>
-          <li>Collaborated with a 6-member analytics team to interpret market trends, prepare business reports, and translate analytical findings into data-driven insights that supported client presentations and strategic research projects.</li>
+          <li>Learned the fundamentals of Zoho DataPrep 2.0 and explored data preparation concepts, including data cleaning, transformation, and validation.</li>
+          <li>Gained hands-on experience with ETL workflows, data profiling, and schema mapping through guided tasks and product exploration.</li>
+          <li>Assisted in feature testing, dataset validation, and identifying data quality issues to support product development.</li>
+          <li>Worked with SQL and sample datasets to understand data preparation, transformation, and analytics workflows.</li>
+          <li>Collaborated with mentors and engineering team members, participated in knowledge-sharing sessions, and gained exposure to Agile development practices and enterprise data engineering workflows.</li>
         </ul>
 
         <div class="exp-stack">
-          <span>Python</span>
+          <span>Zoho DataPrep</span>
+          <span>ETL</span>
+          <span>Data Profiling</span>
           <span>SQL</span>
-          <span>Machine Learning</span>
-          <span>Data Analysis</span>
-          <span>Exploratory Data Analysis</span>
-          <span>Time Series Forecasting</span>
+          <span>Data Quality</span>
+          <span>Agile</span>
         </div>
       </article>
 
