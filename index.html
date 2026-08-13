@@ -4,565 +4,1767 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Sangram Keshari Ghose | Data Engineer & Analytics</title>
-<meta name="description" content="Portfolio of Sangram Keshari Ghose — Data Engineering & Analytics professional building pipelines, forecasting models, and AI-driven data systems." />
+<meta name="description" content="Portfolio of Sangram Keshari Ghose — Data Engineering & Analytics professional building pipelines, forecasting models, and AI-driven data systems. Open to internship / full-time roles." />
 <meta name="author" content="Sangram Keshari Ghose" />
 <meta name="theme-color" content="#0a0a1a" />
 <meta property="og:type" content="profile" />
 <meta property="og:title" content="Sangram Keshari Ghose | Data Engineer & Analytics" />
-<meta property="og:description" content="Portfolio of Sangram Keshari Ghose — Data Engineering & Analytics professional." />
+<meta property="og:description" content="Portfolio of Sangram Keshari Ghose — Data Engineering & Analytics professional building pipelines, forecasting models, and AI-driven data systems." />
 <meta property="og:url" content="https://sangramghose.github.io/" />
 <meta property="og:image" content="https://sangramghose.github.io/profile.png" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://sangramghose.github.io/profile.png" />
 <link rel="canonical" href="https://sangramghose.github.io/" />
 <link rel="icon" href="profile.png" type="image/png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Sangram Keshari Ghose","jobTitle":"Data Engineer","email":"mailto:sangramkesharighose@gmail.com","image":"https://sangramghose.github.io/profile.png","url":"https://sangramghose.github.io","sameAs":["https://github.com/sangramghose","https://www.linkedin.com/in/sangramghose/"]}
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sangram Keshari Ghose",
+  "jobTitle": "Data Engineer",
+  "email": "mailto:sangramkesharighose@gmail.com",
+  "image": "https://sangramghose.github.io/profile.png",
+  "url": "https://sangramghose.github.io",
+  "sameAs": [
+    "https://github.com/sangramghose",
+    "https://www.linkedin.com/in/sangramghose/"
+  ]
+}
 </script>
 <style>
-:root{
-  --bg:#0a0a1a;--surface:#141432;--elevated:#1a1a4a;
-  --border:rgba(99,102,241,.18);--border-strong:rgba(99,102,241,.45);
-  --fg:#eef0ff;--muted:#8b90b8;--primary:#6366f1;--accent:#818cf8;--accent2:#a5b4fc;
-  --grad:linear-gradient(120deg,#818cf8,#6366f1,#a78bfa);
-  --radius:24px;--max:1280px;--nav-h:72px;
-  --card-shadow:0 24px 60px rgba(0,0,0,.45);
-  --ease:cubic-bezier(.16,1,.3,1);
+:root {
+  --bg: #0a0a1a;
+  --surface: #141432;
+  --elevated: #1a1a4a;
+  --border: rgba(99, 102, 241, 0.18);
+  --border-strong: rgba(99, 102, 241, 0.45);
+  --fg: #eef0ff;
+  --muted: #8b90b8;
+  --primary: #6366f1;
+  --accent: #818cf8;
+  --accent2: #a5b4fc;
+  --grad: linear-gradient(120deg, #818cf8, #6366f1, #a78bfa);
+  --radius: 24px;
+  --max: 1280px;
+  --nav-h: 72px;
+  --card-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
-[data-theme="light"]{
-  --bg:#f4f5fb;--surface:#fff;--elevated:#eef0f8;
-  --border:rgba(79,70,229,.12);--border-strong:rgba(79,70,229,.35);
-  --fg:#0f0f2a;--muted:#5a5f85;--primary:#4f46e5;--accent:#6366f1;--accent2:#4f46e5;
-  --grad:linear-gradient(120deg,#6366f1,#4f46e5,#7c3aed);
-  --card-shadow:0 20px 50px rgba(0,0,0,.08);
+
+[data-theme="light"] {
+  --bg: #f4f5fb;
+  --surface: #ffffff;
+  --elevated: #eef0f8;
+  --border: rgba(79, 70, 229, 0.12);
+  --border-strong: rgba(79, 70, 229, 0.35);
+  --fg: #0f0f2a;
+  --muted: #5a5f85;
+  --primary: #4f46e5;
+  --accent: #6366f1;
+  --accent2: #4f46e5;
+  --grad: linear-gradient(120deg, #6366f1, #4f46e5, #7c3aed);
+  --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:6rem}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:"Plus Jakarta Sans",system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .35s,color .35s}
-h1,h2,h3,h4{font-family:Syne,system-ui,sans-serif;font-weight:800;line-height:1.1;letter-spacing:-.02em;margin:0}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
-ul{list-style:none;margin:0;padding:0}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-.text-grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.muted{color:var(--muted)}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Syne, system-ui, sans-serif;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.text-grad {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.muted {
+  color: var(--muted);
+}
 
 /* Atmosphere */
-.bg-mesh{position:fixed;inset:0;z-index:-3;pointer-events:none;opacity:.45;background:radial-gradient(55rem 38rem at 12% -8%,rgba(99,102,241,.45),transparent 62%),radial-gradient(45rem 32rem at 92% 6%,rgba(99,102,241,.28),transparent 62%)}
-.bg-grid{position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:linear-gradient(rgba(139,144,184,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(139,144,184,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse 90% 55% at 50% 0%,#000 30%,transparent 100%)}
-.orb{position:fixed;border-radius:9999px;filter:blur(110px);opacity:.28;z-index:-1;pointer-events:none;animation:float 22s ease-in-out infinite}
-.orb-1{width:26rem;height:26rem;top:-6rem;left:-8rem;background:var(--primary)}
-.orb-2{width:22rem;height:22rem;top:45%;right:-8rem;background:var(--accent);animation-delay:-8s}
-.orb-3{width:20rem;height:20rem;bottom:-6rem;left:32%;background:var(--primary);animation-delay:-14s}
-@keyframes float{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(2rem,-2.5rem,0) scale(1.08)}}
+.bg-mesh {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+  opacity: 0.45;
+  background:
+    radial-gradient(55rem 38rem at 12% -8%, rgba(99, 102, 241, 0.45), transparent 62%),
+    radial-gradient(45rem 32rem at 92% 6%, rgba(99, 102, 241, 0.28), transparent 62%);
+}
 
-/* Nav – matched to screenshot */
-header{position:fixed;inset-x:0;top:0;z-index:50;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
-header.scrolled{background:color-mix(in oklab,var(--bg) 85%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom-color:var(--border)}
-.navrow{display:flex;align-items:center;gap:12px;height:var(--nav-h)}
-.brand{font-family:Syne,sans-serif;font-weight:800;font-size:1.15rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;flex-shrink:0}
-nav.links{display:flex;align-items:center;gap:2px;margin:0 auto}
-nav.links a{padding:8px 14px;border-radius:12px;font-size:.875rem;font-weight:500;color:var(--muted);transition:color .2s,background .2s}
-nav.links a:hover{color:var(--fg);background:rgba(99,102,241,.08)}
-nav.links a.active{color:var(--fg);background:rgba(99,102,241,.18);border:1px solid var(--border-strong)}
-.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-left:auto}
-.iconbtn{width:40px;height:40px;border-radius:12px;border:1px solid var(--border);background:color-mix(in oklab,var(--surface) 70%,transparent);color:var(--fg);display:grid;place-items:center;transition:border-color .2s}
-.iconbtn:hover{border-color:var(--border-strong)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:14px;font-weight:700;font-size:.875rem;border:1px solid transparent;transition:transform .25s,box-shadow .25s}
-.btn-primary{background:var(--grad);color:#fff;box-shadow:0 12px 32px rgba(99,102,241,.35)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(99,102,241,.45)}
-.btn-ghost{border-color:var(--border);background:color-mix(in oklab,var(--surface) 60%,transparent);color:var(--fg)}
-.btn-ghost:hover{border-color:var(--border-strong);transform:translateY(-2px)}
-@media(max-width:960px){nav.links{display:none}.btn-nav-cta{display:none}}
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(139, 144, 184, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 144, 184, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 90% 55% at 50% 0%, #000 30%, transparent 100%);
+}
+
+.orb {
+  position: fixed;
+  border-radius: 9999px;
+  filter: blur(110px);
+  opacity: 0.28;
+  z-index: -1;
+  pointer-events: none;
+  animation: float 22s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 26rem;
+  height: 26rem;
+  top: -6rem;
+  left: -8rem;
+  background: var(--primary);
+}
+
+.orb-2 {
+  width: 22rem;
+  height: 22rem;
+  top: 45%;
+  right: -8rem;
+  background: var(--accent);
+  animation-delay: -8s;
+}
+
+.orb-3 {
+  width: 20rem;
+  height: 20rem;
+  bottom: -6rem;
+  left: 32%;
+  background: var(--primary);
+  animation-delay: -14s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2rem, -2.5rem, 0) scale(1.08);
+  }
+}
+
+/* Header / Nav */
+header {
+  position: fixed;
+  inset-x: 0;
+  top: 0;
+  z-index: 50;
+  transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+header.scrolled {
+  background: color-mix(in oklab, var(--bg) 85%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom-color: var(--border);
+}
+
+.navrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: var(--nav-h);
+}
+
+.brand {
+  font-family: Syne, sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  flex-shrink: 0;
+}
+
+nav.links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 0 auto;
+}
+
+nav.links a {
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+  border: 1px solid transparent;
+}
+
+nav.links a:hover {
+  color: var(--fg);
+  background: rgba(99, 102, 241, 0.08);
+}
+
+nav.links a.active {
+  color: var(--fg);
+  background: rgba(99, 102, 241, 0.18);
+  border-color: var(--border-strong);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.iconbtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--surface) 70%, transparent);
+  color: var(--fg);
+  display: grid;
+  place-items: center;
+  transition: border-color 0.2s;
+}
+
+.iconbtn:hover {
+  border-color: var(--border-strong);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: 1px solid transparent;
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+}
+
+.btn-primary {
+  background: var(--grad);
+  color: #fff;
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(99, 102, 241, 0.45);
+}
+
+.btn-ghost {
+  border-color: var(--border);
+  background: color-mix(in oklab, var(--surface) 60%, transparent);
+  color: var(--fg);
+}
+
+.btn-ghost:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 960px) {
+  nav.links {
+    display: none;
+  }
+  .btn-nav-cta {
+    display: none;
+  }
+}
 
 /* Sections */
-section{padding:72px 0}
-.sec-head{margin-bottom:32px}
-.sec-head .label{display:inline-flex;align-items:center;gap:10px;margin-bottom:12px}
-.sec-head .label .line{width:32px;height:1px;background:var(--grad)}
-.sec-head h2{font-size:clamp(2rem,4.5vw,3.25rem)}
-.sec-head .desc{max-width:28rem;color:var(--muted);font-size:.9rem;margin-top:8px}
-@media(min-width:768px){.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}.sec-head .desc{margin-top:0;text-align:right}}
-.sec-rule{height:1px;background:linear-gradient(90deg,var(--border-strong),transparent);margin-top:24px}
+section {
+  padding: 72px 0;
+}
 
-/* Bento */
-.bento{display:grid;grid-template-columns:1fr;gap:16px}
-@media(min-width:768px){.bento{grid-template-columns:repeat(12,1fr)}}
-.tile{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);transition:border-color .35s,transform .35s,box-shadow .35s}
-.tile:hover{border-color:var(--border-strong);transform:translateY(-3px);box-shadow:var(--card-shadow)}
-.tile-glow::before{content:"";position:absolute;top:-6rem;right:-6rem;width:16rem;height:16rem;border-radius:9999px;background:var(--primary);opacity:.18;filter:blur(70px);pointer-events:none}
-.span-12{grid-column:span 1}.span-8{grid-column:span 1}.span-7{grid-column:span 1}.span-6{grid-column:span 1}.span-5{grid-column:span 1}.span-4{grid-column:span 1}.span-3{grid-column:span 1}
-@media(min-width:768px){.span-12{grid-column:span 12}.span-8{grid-column:span 8}.span-7{grid-column:span 7}.span-6{grid-column:span 6}.span-5{grid-column:span 5}.span-4{grid-column:span 4}.span-3{grid-column:span 3}}
-.pill{display:inline-block;padding:6px 14px;border-radius:999px;font-size:.75rem;font-weight:500;border:1px solid var(--border);background:var(--bg);color:var(--muted)}
-.pill-accent{border-color:var(--border-strong);background:rgba(99,102,241,.15);color:var(--accent2)}
-.icon-box{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:rgba(99,102,241,.15);color:var(--accent2);flex-shrink:0}
-.icon-box svg{width:20px;height:20px}
+.sec-head {
+  margin-bottom: 32px;
+}
+
+.sec-head .label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.sec-head .label .line {
+  width: 32px;
+  height: 1px;
+  background: var(--grad);
+}
+
+.sec-head h2 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+}
+
+.sec-head .desc {
+  max-width: 28rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .sec-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .sec-head .desc {
+    margin-top: 0;
+    text-align: right;
+  }
+}
+
+.sec-rule {
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-strong), transparent);
+  margin-top: 24px;
+}
+
+/* Bento grid */
+.bento {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .bento {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s;
+}
+
+.tile:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow);
+}
+
+.tile-glow::before {
+  content: "";
+  position: absolute;
+  top: -6rem;
+  right: -6rem;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 9999px;
+  background: var(--primary);
+  opacity: 0.18;
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.span-12 { grid-column: span 1; }
+.span-8  { grid-column: span 1; }
+.span-7  { grid-column: span 1; }
+.span-6  { grid-column: span 1; }
+.span-5  { grid-column: span 1; }
+.span-4  { grid-column: span 1; }
+.span-3  { grid-column: span 1; }
+
+@media (min-width: 768px) {
+  .span-12 { grid-column: span 12; }
+  .span-8  { grid-column: span 8; }
+  .span-7  { grid-column: span 7; }
+  .span-6  { grid-column: span 6; }
+  .span-5  { grid-column: span 5; }
+  .span-4  { grid-column: span 4; }
+  .span-3  { grid-column: span 3; }
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--muted);
+}
+
+.pill-accent {
+  border-color: var(--border-strong);
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent2);
+}
+
+.icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent2);
+  flex-shrink: 0;
+}
+
+.icon-box svg {
+  width: 20px;
+  height: 20px;
+}
 
 /* Hero */
-.hero{padding-top:calc(var(--nav-h) + 48px)}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid var(--border-strong);background:rgba(99,102,241,.12);font-size:.75rem;font-weight:700;color:var(--accent2)}
-.pulse{width:8px;height:8px;border-radius:99px;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.5);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(52,211,153,.45)}60%{box-shadow:0 0 0 8px transparent}}
-.hero h1{font-size:clamp(2.8rem,7vw,5rem);margin:16px 0 12px;line-height:.95}
-.typed{color:var(--accent2);font-weight:700}
-.typed::after{content:"|";margin-left:1px;animation:blink 1s steps(1) infinite;color:var(--accent)}
-@keyframes blink{50%{opacity:0}}
-.portrait{position:relative;min-height:280px;padding:0}
-@media(min-width:768px){.portrait{min-height:100%}}
-.portrait img{width:100%;height:100%;object-fit:cover;min-height:280px}
-.portrait-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,var(--bg));opacity:.9;pointer-events:none}
-.portrait-cap{position:absolute;left:24px;right:24px;bottom:24px;z-index:2}
-.metric-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.metric-val{font-family:Syne,sans-serif;font-size:2.75rem;font-weight:800;margin-top:8px}
-.metric-sub{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:4px}
+.hero {
+  padding-top: calc(var(--nav-h) + 48px);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: rgba(99, 102, 241, 0.12);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent2);
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: #34d399;
+  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.45);
+  }
+  60% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  margin: 16px 0 12px;
+  line-height: 0.95;
+}
+
+.typed {
+  color: var(--accent2);
+  font-weight: 700;
+}
+
+.typed::after {
+  content: "|";
+  margin-left: 1px;
+  animation: blink 1s steps(1) infinite;
+  color: var(--accent);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.portrait {
+  position: relative;
+  min-height: 280px;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .portrait {
+    min-height: 100%;
+  }
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 280px;
+}
+
+.portrait-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, var(--bg));
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.portrait-cap {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2;
+}
+
+.metric-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.metric-val {
+  font-family: Syne, sans-serif;
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.metric-sub {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-top: 4px;
+}
 
 /* Marquee */
-.marquee-wrap{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.marquee-track{display:flex;gap:2.5rem;width:max-content;animation:marquee 32s linear infinite}
-.marquee-wrap:hover .marquee-track{animation-play-state:paused}
-@keyframes marquee{to{transform:translateX(-50%)}}
-.marquee-track span{font-family:Syne,sans-serif;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
-.marquee-track span:nth-child(odd){color:var(--muted)}
+.marquee-wrap {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 2.5rem;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.marquee-wrap:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track span {
+  font-family: Syne, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.marquee-track span:nth-child(odd) {
+  color: var(--muted);
+}
 
 /* Reveal */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-.reveal.in{opacity:1;transform:none}
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
 
 /* Experience */
-.mono-circle{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;border:1px solid var(--border-strong);background:rgba(99,102,241,.12);font-family:Syne,sans-serif;font-weight:800;font-size:.85rem;color:var(--accent2);flex-shrink:0}
-.exp-logo{width:48px;height:48px;border-radius:12px;object-fit:contain;background:#fff;padding:5px;border:1px solid var(--border);flex-shrink:0}
-.exp-bullets{display:grid;gap:12px;margin-top:20px;padding:0}
-@media(min-width:768px){.exp-bullets.two{grid-template-columns:1fr 1fr}}
-.exp-bullets li{display:flex;gap:10px;font-size:.875rem;color:var(--muted);line-height:1.55}
-.exp-bullets li::before{content:"";width:6px;height:6px;border-radius:99px;background:var(--primary);margin-top:8px;flex-shrink:0}
+.mono-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-strong);
+  background: rgba(99, 102, 241, 0.12);
+  font-family: Syne, sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--accent2);
+  flex-shrink: 0;
+}
+
+.exp-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: contain;
+  background: #fff;
+  padding: 5px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.exp-bullets {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .exp-bullets.two {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.exp-bullets li {
+  display: flex;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.55;
+  list-style: none;
+}
+
+.exp-bullets li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 99px;
+  background: var(--primary);
+  margin-top: 8px;
+  flex-shrink: 0;
+}
 
 /* Projects */
-a.tile-link{display:flex;flex-direction:column;color:inherit}
-.project-preview{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:#0d0d1a;aspect-ratio:16/9}
-.project-preview img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s ease}
-.tile:hover .project-preview img{transform:scale(1.03)}
-.cert-badge{width:64px;height:64px;object-fit:contain;margin-bottom:12px;border-radius:8px}
+a.tile-link {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+}
+
+.project-preview {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #0d0d1a;
+  aspect-ratio: 16 / 9;
+}
+
+.project-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.tile:hover .project-preview img {
+  transform: scale(1.03);
+}
+
+.cert-badge {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
 
 /* Contact icons */
-.contact-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(99,102,241,.15);color:var(--accent2);margin-bottom:16px}
-.contact-icon svg{width:18px;height:18px}
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent2);
+  margin-bottom: 16px;
+}
 
-footer{border-top:1px solid var(--border);padding:36px 0;text-align:center;color:var(--muted);font-size:.875rem}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.orb,.marquee-track{animation:none}}
+.contact-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 36px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .orb,
+  .marquee-track {
+    animation: none;
+  }
+}
 </style>
 </head>
 <body>
-<div class="bg-mesh" aria-hidden="true"></div>
-<div class="bg-grid" aria-hidden="true"></div>
-<div class="orb orb-1" aria-hidden="true"></div>
-<div class="orb orb-2" aria-hidden="true"></div>
-<div class="orb orb-3" aria-hidden="true"></div>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
 
-<header id="header">
-  <div class="wrap navrow">
-    <a class="brand" href="#home">SKG</a>
-    <nav class="links" id="nav" aria-label="Primary"></nav>
-    <div class="nav-actions">
-      <button class="iconbtn" id="theme" aria-label="Toggle theme" title="Toggle theme">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-      </button>
-      <a class="btn btn-primary btn-nav-cta" href="#contact">Get in touch</a>
+  <header id="header">
+    <div class="wrap navrow">
+      <a class="brand" href="#home">SKG</a>
+      <nav class="links" id="nav" aria-label="Primary"></nav>
+      <div class="nav-actions">
+        <button class="iconbtn" id="theme" aria-label="Toggle theme" title="Toggle theme">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5" />
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+        </button>
+        <a class="btn btn-primary btn-nav-cta" href="#contact">Get in touch</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="wrap">
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="bento">
-      <div class="tile tile-glow reveal span-8" style="padding:40px;display:flex;flex-direction:column;justify-content:center">
-        <div class="hero-badge"><span class="pulse"></span> Open to Internship / Full-time</div>
-        <div class="mono" style="margin-top:20px;color:var(--accent2)">Data Engineering &amp; Analytics</div>
-        <h1>Sangram<br>Keshari<br><span class="text-grad">Ghose</span></h1>
-        <p style="font-size:1.1rem;font-weight:500;margin:8px 0 12px">Building intelligent data systems · <span class="typed" id="typed"></span></p>
-        <p class="muted" style="max-width:36rem">Data Engineering &amp; Analytics professional focused on scalable pipelines, forecasting models, and turning complex datasets into actionable intelligence.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
-          <a class="btn btn-primary" href="#contact">Get in Touch</a>
-          <a class="btn btn-ghost" href="https://github.com/sangramghose" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/sangramghose/" target="_blank" rel="noopener">LinkedIn</a>
+  <main class="wrap">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="bento">
+        <div class="tile tile-glow reveal span-8" style="padding:40px;display:flex;flex-direction:column;justify-content:center">
+          <div class="hero-badge">
+            <span class="pulse"></span>
+            Open to Internship / Full-time
+          </div>
+          <div class="mono" style="margin-top:20px;color:var(--accent2)">Data Engineering &amp; Analytics</div>
+          <h1>
+            Sangram<br />
+            Keshari<br />
+            <span class="text-grad">Ghose</span>
+          </h1>
+          <p style="font-size:1.1rem;font-weight:500;margin:8px 0 12px">
+            Building intelligent data systems · <span class="typed" id="typed"></span>
+          </p>
+          <p class="muted" style="max-width:36rem">
+            Data Engineering &amp; Analytics professional focused on scalable pipelines,
+            forecasting models, and turning complex datasets into actionable intelligence.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
+            <a class="btn btn-primary" href="#contact">Get in Touch</a>
+            <a class="btn btn-ghost" href="https://github.com/sangramghose" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/sangramghose/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="tile reveal span-4 portrait">
+          <img src="profile.png" alt="Sangram Keshari Ghose" width="640" height="800" />
+          <div class="portrait-overlay"></div>
+          <div class="portrait-cap">
+            <div class="mono">Based in India</div>
+            <div style="font-family:Syne;font-weight:800;font-size:1.15rem;margin-top:4px">
+              Open to Data roles
+            </div>
+          </div>
+        </div>
+
+        <div class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;justify-content:space-between">
+          <div class="metric-label">Metric</div>
+          <div>
+            <div class="metric-val count" data-to="3">0</div>
+            <div class="metric-sub">Internships</div>
+          </div>
+        </div>
+        <div class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;justify-content:space-between;background:var(--elevated);border-color:var(--border-strong)">
+          <div class="metric-label">Metric</div>
+          <div>
+            <div class="metric-val count" data-to="7">0</div>
+            <div class="metric-sub">Certifications</div>
+          </div>
+        </div>
+        <div class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;justify-content:space-between">
+          <div class="metric-label">Metric</div>
+          <div>
+            <div class="metric-val count" data-to="10" data-suffix="+">0</div>
+            <div class="metric-sub">Forecast Scenarios</div>
+          </div>
+        </div>
+        <div class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;justify-content:space-between">
+          <div class="metric-label">Metric</div>
+          <div>
+            <div class="metric-val text-grad">∞</div>
+            <div class="metric-sub">Curiosity</div>
+          </div>
+        </div>
+
+        <div class="tile reveal span-12" style="padding:16px">
+          <div class="marquee-wrap">
+            <div class="marquee-track" id="mq"></div>
+          </div>
         </div>
       </div>
-      <div class="tile reveal span-4 portrait">
-        <img src="profile.png" alt="Sangram Keshari Ghose" width="640" height="800" />
-        <div class="portrait-overlay"></div>
-        <div class="portrait-cap">
-          <div class="mono">Based in India</div>
-          <div style="font-family:Syne;font-weight:800;font-size:1.15rem;margin-top:4px">Open to Data roles</div>
-        </div>
-      </div>
-      <div class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;justify-content:space-between">
-        <div class="metric-label">Metric</div>
-        <div><div class="metric-val count" data-to="3">0</div><div class="metric-sub">Internships</div></div>
-      </div>
-      <div class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;justify-content:space-between;background:var(--elevated);border-color:var(--border-strong)">
-        <div class="metric-label">Metric</div>
-        <div><div class="metric-val count" data-to="7">0</div><div class="metric-sub">Certifications</div></div>
-      </div>
-      <div class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;justify-content:space-between">
-        <div class="metric-label">Metric</div>
-        <div><div class="metric-val count" data-to="10" data-suffix="+">0</div><div class="metric-sub">Forecast Scenarios</div></div>
-      </div>
-      <div class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;justify-content:space-between">
-        <div class="metric-label">Metric</div>
-        <div><div class="metric-val text-grad">∞</div><div class="metric-sub">Curiosity</div></div>
-      </div>
-      <div class="tile reveal span-12" style="padding:16px">
-        <div class="marquee-wrap"><div class="marquee-track" id="mq"></div></div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- HIGHLIGHTS -->
-  <section id="highlights">
-    <div class="sec-head reveal">
-      <div>
-        <div class="label"><span class="line"></span><span class="mono">01 / Featured</span></div>
-        <h2 class="text-grad">Highlights &amp; Achievements</h2>
-      </div>
-      <p class="desc">A snapshot of the work, certifications and projects that define the journey.</p>
-    </div>
-    <div class="sec-rule"></div>
-    <div class="bento" style="margin-top:28px" id="g-high"></div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="sec-head reveal">
-      <div>
-        <div class="label"><span class="line"></span><span class="mono">02 / Profile</span></div>
-        <h2 class="text-grad">About Me</h2>
-      </div>
-      <p class="desc">Turning messy, large-scale datasets into reliable, production-ready systems.</p>
-    </div>
-    <div class="sec-rule"></div>
-    <div class="bento" style="margin-top:28px">
-      <div class="tile reveal span-7" style="padding:32px" id="about-txt"></div>
-      <div class="tile reveal span-5" style="padding:32px">
-        <div class="mono">Tech I love</div>
-        <div id="loved" style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px"></div>
-        <div style="border-top:1px solid var(--border);margin-top:28px;padding-top:24px">
-          <div class="mono">Where I'm heading</div>
-          <ul id="goals" style="margin:14px 0 0"></ul>
-        </div>
-      </div>
-      <div class="tile reveal span-12" style="padding:24px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--elevated);border-color:var(--border-strong)">
+    <!-- HIGHLIGHTS -->
+    <section id="highlights">
+      <div class="sec-head reveal">
         <div>
-          <div class="mono">Direct line</div>
-          <div style="font-family:Syne;font-weight:800;font-size:1.15rem;margin-top:4px">sangramkesharighose@gmail.com</div>
+          <div class="label">
+            <span class="line"></span>
+            <span class="mono">01 / Featured</span>
+          </div>
+          <h2 class="text-grad">Highlights &amp; Achievements</h2>
         </div>
-        <div class="muted" style="font-size:.9rem">+91 8456841232</div>
+        <p class="desc">A snapshot of the work, certifications and projects that define the journey.</p>
       </div>
-    </div>
-  </section>
+      <div class="sec-rule"></div>
+      <div class="bento" style="margin-top:28px" id="g-high"></div>
+    </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="sec-head reveal">
-      <div>
-        <div class="label"><span class="line"></span><span class="mono">03 / Core Stack</span></div>
-        <h2 class="text-grad">Skills &amp; Tooling</h2>
-      </div>
-      <p class="desc">The languages, platforms and practices behind the pipelines.</p>
-    </div>
-    <div class="sec-rule"></div>
-    <div class="bento" style="margin-top:28px" id="g-skills"></div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="sec-head reveal">
-      <div>
-        <div class="label"><span class="line"></span><span class="mono">04 / History</span></div>
-        <h2 class="text-grad">Experience</h2>
-      </div>
-      <p class="desc">Internships across market research, enterprise engineering and data products.</p>
-    </div>
-    <div class="sec-rule"></div>
-    <div class="bento" style="margin-top:28px" id="g-exp"></div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="sec-head reveal">
-      <div>
-        <div class="label"><span class="line"></span><span class="mono">05 / Work</span></div>
-        <h2 class="text-grad">Projects</h2>
-      </div>
-      <p class="desc">Flagship builds — from AI analytics platforms to end-to-end ML pipelines.</p>
-    </div>
-    <div class="sec-rule"></div>
-    <div id="g-proj" style="margin-top:28px;display:grid;gap:16px"></div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="sec-head reveal">
-      <div>
-        <div class="label"><span class="line"></span><span class="mono">06 / Academics</span></div>
-        <h2 class="text-grad">Education</h2>
-      </div>
-    </div>
-    <div class="sec-rule"></div>
-    <div class="bento" style="margin-top:28px" id="g-edu"></div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications">
-    <div class="sec-head reveal">
-      <div>
-        <div class="label"><span class="line"></span><span class="mono">07 / Credentials</span></div>
-        <h2 class="text-grad">Certifications</h2>
-      </div>
-      <p class="desc">Seven industry certifications across cloud, data engineering and AI.</p>
-    </div>
-    <div class="sec-rule"></div>
-    <div class="bento" style="margin-top:28px" id="g-cert"></div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" style="padding-bottom:96px">
-    <div class="sec-head reveal">
-      <div>
-        <div class="label"><span class="line"></span><span class="mono">08 / Contact</span></div>
-        <h2 class="text-grad">Let's build something</h2>
-      </div>
-      <p class="desc">Open to internships and full-time Data Engineering roles.</p>
-    </div>
-    <div class="sec-rule"></div>
-    <div class="bento" style="margin-top:28px">
-      <div class="tile reveal span-12" style="padding:32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;background:var(--primary);border-color:var(--primary);color:#fff">
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="sec-head reveal">
         <div>
-          <h3 style="font-size:1.5rem;color:#fff">Open for collaboration</h3>
-          <p style="margin:4px 0 0;opacity:.85">Let's build something scalable.</p>
+          <div class="label">
+            <span class="line"></span>
+            <span class="mono">02 / Profile</span>
+          </div>
+          <h2 class="text-grad">About Me</h2>
         </div>
-        <a class="btn" href="mailto:sangramkesharighose@gmail.com" style="background:#fff;color:var(--primary)">Get in Touch</a>
+        <p class="desc">Turning messy, large-scale datasets into reliable, production-ready systems.</p>
       </div>
-
-      <!-- Email -->
-      <a class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;min-height:140px" href="mailto:sangramkesharighose@gmail.com">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      <div class="sec-rule"></div>
+      <div class="bento" style="margin-top:28px">
+        <div class="tile reveal span-7" style="padding:32px" id="about-txt"></div>
+        <div class="tile reveal span-5" style="padding:32px">
+          <div class="mono">Tech I love</div>
+          <div id="loved" style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px"></div>
+          <div style="border-top:1px solid var(--border);margin-top:28px;padding-top:24px">
+            <div class="mono">Where I'm heading</div>
+            <ul id="goals" style="margin:14px 0 0"></ul>
+          </div>
         </div>
-        <span class="mono">Email</span>
-        <span style="font-family:Syne;font-weight:700;font-size:.9rem;margin-top:8px;word-break:break-all">sangramkesharighose@gmail.com</span>
-      </a>
-
-      <!-- Phone -->
-      <a class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;min-height:140px" href="tel:+918456841232">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div class="tile reveal span-12" style="padding:24px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--elevated);border-color:var(--border-strong)">
+          <div>
+            <div class="mono">Direct line</div>
+            <div style="font-family:Syne;font-weight:800;font-size:1.15rem;margin-top:4px">
+              sangramkesharighose@gmail.com
+            </div>
+          </div>
+          <div class="muted" style="font-size:.9rem">+91 8456841232</div>
         </div>
-        <span class="mono">Phone</span>
-        <span style="font-family:Syne;font-weight:700;font-size:.95rem;margin-top:8px">+91 8456841232</span>
-      </a>
+      </div>
+    </section>
 
-      <!-- GitHub -->
-      <a class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;min-height:140px" href="https://github.com/sangramghose" target="_blank" rel="noopener">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-        </div>
-        <span class="mono">GitHub</span>
-        <span style="font-family:Syne;font-weight:700;font-size:.95rem;margin-top:8px">@sangramghose</span>
-      </a>
-
-      <!-- LinkedIn -->
-      <a class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;min-height:140px" href="https://www.linkedin.com/in/sangramghose/" target="_blank" rel="noopener">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-        </div>
-        <span class="mono">LinkedIn</span>
-        <span style="font-family:Syne;font-weight:700;font-size:.95rem;margin-top:8px">in/sangramghose</span>
-      </a>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">© <span id="yr"></span> Sangram Keshari Ghose · Built with focus &amp; precision</div>
-</footer>
-
-<script>
-const DATA={
-  nav:[["home","Home"],["highlights","Highlights"],["about","About"],["skills","Skills"],["experience","Experience"],["projects","Projects"],["education","Education"],["certifications","Certifications"],["contact","Contact"]],
-  roles:["Data Engineer","AI Data Engineer","Machine Learning Engineer","Data Consultant","Data Analyst"],
-  tech:["Python","SQL","Pandas","Machine Learning","Time Series","Google Cloud","Microsoft Fabric","Agentic AI","EDA","Data Engineering"],
-  highlights:[
-    {icon:"building",title:"Industry Internships",body:"Hands-on experience at Frost & Sullivan, Infinite Computer Solutions, and Zoho — delivering real-world analytics and data solutions.",tag:"3 Companies",span:"span-5"},
-    {icon:"agent",title:"Nebius Certified",body:"Agentic AI Builder — building autonomous AI agents, generative workflows, and RAG pipelines.",tag:"Agentic AI",span:"span-4"},
-    {icon:"layers",title:"Microsoft Fabric",body:"Fabric Data Engineer Associate — end-to-end data engineering on Microsoft's unified analytics platform.",tag:"Certification",span:"span-3"},
-    {icon:"cloud",title:"Google Cloud",body:"Associate Cloud Engineer — designing, deploying, and managing secure, scalable solutions on GCP.",tag:"Cloud",span:"span-3"},
-    {icon:"rocket",title:"Deploytual",body:"Deploy intelligence. Any data. Anywhere. — AI-powered analytics platform with AutoML, NL querying & one-click reports.",tag:"Flagship Project",span:"span-5"},
-    {icon:"chart",title:"WorkforceIQ",body:"End-to-end workforce analytics pipeline with attrition prediction, clustering & sentiment analysis on 50K+ records.",tag:"ML Pipeline",span:"span-4"}
-  ],
-  about:[
-    "I'm <strong>Sangram Keshari Ghose</strong>, a Data Engineering &amp; Analytics professional who loves turning messy, large-scale datasets into reliable insights and production-ready systems.",
-    "My journey has taken me through high-impact internships where I worked on industry datasets, built forecasting models, and collaborated with cross-functional teams to deliver consulting-grade deliverables.",
-    "I specialize in <strong>Data Engineering &amp; Analytics</strong> — cleaning, modeling, forecasting, and communicating findings that actually move the needle.",
-    "I enjoy working across industries that thrive on data-driven decisions, and I'm constantly exploring the intersection of traditional data engineering and modern AI systems."
-  ],
-  loved:["Python","SQL","Pandas","Time Series","Machine Learning","Google Cloud","Microsoft Fabric","Agentic AI"],
-  skills:[
-    {icon:"code",title:"Programming & Data",span:"span-4",items:[["Python",1],["SQL",1],["Pandas",1],["NumPy",0],["N1QL",0],["Node.js",0]]},
-    {icon:"agent",title:"Machine Learning & AI",span:"span-8",items:[["Machine Learning",1],["Time Series (Prophet / SARIMAX)",1],["Scikit-learn",0],["Random Forest",0],["K-Means",0],["Agentic AI",1],["RAG",0],["VADER / NLP",0]]},
-    {icon:"database",title:"Data Engineering",span:"span-7",items:[["ETL Pipelines",1],["Data Cleaning & EDA",1],["Data Modeling",0],["Microsoft Fabric",1],["Couchbase",0],["Data Profiling",0],["Schema Mapping",0]]},
-    {icon:"cloud",title:"Cloud & DevOps",span:"span-5",items:[["Google Cloud (GCP)",1],["Docker",0],["Kubernetes",0],["Helm",0],["CI/CD",0],["FastAPI",0]]},
-    {icon:"chart",title:"Visualization & BI",span:"span-5",items:[["Tableau",1],["Plotly",0],["Chart.js",0],["Power Automate",0],["Executive Reporting",0]]},
-    {icon:"settings",title:"Practices & Tools",span:"span-7",items:[["Git & GitHub",0],["Agile / Scrum",0],["REST APIs",0],["JWT + OAuth",0],["WebSocket",0],["Model Evaluation (RMSE, MAE, MAPE)",0]]}
-  ],
-  exp:[
-    {short:"FS",role:"Data & Analytics Intern",company:"Frost & Sullivan",duration:"Jun 2025 – Aug 2025",location:"Mumbai, Maharashtra, India",full:true,logo:"frost-logo.png",
-      bullets:["Analyzed large-scale industry datasets using Python, Pandas, and SQL, supporting market intelligence, trend analysis, and demand forecasting across 2 industry sectors.","Assisted in developing SARIMAX and Prophet forecasting models while performing data cleaning, feature engineering, and exploratory data analysis (EDA) to improve the quality and reliability of forecasting datasets.","Evaluated forecasting models using RMSE, MAE, and MAPE, contributing to the validation of 10+ forecasting scenarios and preparing analytical outputs for internal research reports and consulting deliverables.","Collaborated with a 6-member analytics team to interpret market trends, prepare business reports, and translate analytical findings into data-driven insights that supported client presentations and strategic research projects."],
-      stack:["Python","SQL","Machine Learning","Data Analysis","EDA","Time Series Forecasting"]},
-    {short:"IC",role:"Software Engineer Intern",company:"Infinite Computer Solutions",duration:"Apr 2025 – Jun 2025",location:"Bengaluru, Karnataka, India",full:false,logo:"infinite-logo.png",
-      bullets:["Developed analytics-focused microservices and automated KPI dashboards using Node.js, Couchbase (N1QL), and REST APIs, delivering real-time workforce analytics for 20+ stakeholders and reducing report turnaround time by 60%.","Engineered ETL-style data pipelines to extract, transform, and deliver analytics-ready datasets from Couchbase, automating recurring reporting workflows and eliminating approximately 4 hours of manual reporting effort per week.","Contributed to the migration of enterprise data from IBM DB2 (SQL) to Couchbase (NoSQL) using a Pub-Sub architecture, supporting scalable data processing, backend optimization, and real-time analytics.","Collaborated with cross-functional engineering teams in an Agile environment to build, test, and optimize backend services, improving application reliability, data quality, and performance for an enterprise analytics platform."],
-      stack:["Node.js","Couchbase","N1QL","REST APIs","ETL Pipelines","Pub-Sub","Agile"]},
-    {short:"ZO",role:"Summer Intern",company:"Zoho · DataPrep 2.0",duration:"Jun 2024 – Jul 2024",location:"Chennai, Tamil Nadu, India",full:false,logo:"zoho-logo.png",
-      bullets:["Learned the fundamentals of Zoho DataPrep 2.0 and explored data preparation concepts, including data cleaning, transformation, and validation.","Gained hands-on experience with ETL workflows, data profiling, and schema mapping through guided tasks and product exploration.","Assisted in feature testing, dataset validation, and identifying data quality issues to support product development.","Worked with SQL and sample datasets to understand data preparation, transformation, and analytics workflows."],
-      stack:["Zoho DataPrep","ETL","Data Profiling","SQL","Agile"]}
-  ],
-  proj:[
-    {title:"Deploytual",tagline:"Deploy intelligence. Any data. Anywhere.",live:true,desc:"An AI-powered analytics platform that unifies data connectivity, natural language querying, automated machine learning, and one-click reporting into a single, deployable engine.",period:"Jun 2026 – Present",preview:"deploytual-preview.png",
-      features:[["Natural Language Querying","Ask questions in plain English — AI converts them into SQL or Pandas automatically."],["AutoML Engine","Anomaly detection, time-series forecasting (Prophet), and clustering — zero ML expertise required."],["AI Data Cleaning Studio","Missing value alerts, outlier detection, and one-click fixes."],["Explainable AI + Storyteller","Every answer reveals the exact code. Built-in text-to-speech reads insights aloud."],["One-Click Executive Reports","Boardroom-ready PDFs with AI-written summaries, charts, and forecasts."],["End-to-End Pipeline Builder","Turn plain-English commands into fully automated ETL → ML → Report workflows."]],
-      stack:["Python","FastAPI","Pandas","scikit-learn","Prophet","Docker","Kubernetes","Helm","CI/CD"],
-      actions:[["Live Demo","https://deploytual.netlify.app/",1],["GitHub","https://github.com/sangramghose/Deploytual",0],["API Docs","https://deploytual.onrender.com/docs",0]]},
-    {title:"WorkforceIQ",tagline:"Workforce Analytics Platform",live:false,desc:"End-to-end analytics pipeline ingesting 50K+ employee records and 10K call transcripts with attrition prediction, clustering, and sentiment analysis.",period:"Jan 2026 – May 2026",preview:null,
-      features:[["Attrition Prediction","Random Forest on 50K records achieving 85%+ accuracy."],["Employee Segmentation","K-Means clustering revealed 4 behavioral personas including a high-risk segment."],["Call Sentiment Analysis","VADER scoring of 10K transcripts with ~92% label agreement."],["Interactive Dashboards","Tableau + self-contained Plotly HTML dashboards."],["Automated Reporting","Power Automate cut manual HR reporting turnaround by 60%."],["Modular Pipeline","Every stage writes to disk — independent and re-runnable."]],
-      stack:["Python","Pandas","Scikit-learn","NLTK","Tableau","Plotly","Power Automate"],
-      actions:[["View on GitHub","https://github.com/sangramghose/Workforce-and-Industry-Trend-Analyzer",1]]}
-  ],
-  cert:[
-    {issuer:"Google Cloud",title:"Associate Cloud Engineer",desc:"Certified in deploying, managing, and monitoring cloud solutions on GCP.",meta:"Jul 2026 → Jul 2029",badge:"gcp-badge.png",skills:["GCP","GKE","IAM","Networking"],href:"https://www.credly.com/badges/00aa87ff-d48f-4b9c-9282-800a1d5a45ef/public_url",span:"span-5"},
-    {issuer:"Nebius Academy",title:"Agentic AI Builder",desc:"Certified in building AI-powered applications, agentic workflows, and RAG pipelines.",meta:"Jul 2026",badge:"nebius-badge.png",skills:["AI Agents","Generative AI","RAG"],href:"https://www.credly.com/badges/5d0821dd-6916-48d6-b3a8-99170ca85762/public_url",span:"span-4"},
-    {issuer:"Microsoft",title:"Fabric Data Engineer Associate",desc:"Certified in building and managing data analytics solutions and pipelines with Microsoft Fabric.",meta:"May 2026 → May 2027",badge:"fabric-badge.png",skills:["Fabric","Ingestion","Transformation"],href:"https://learn.microsoft.com/en-us/users/sangramkesharighose-1289/credentials/6b4e231e67ca56a",span:"span-3"},
-    {issuer:"SAP",title:"SAP Business Data Cloud",desc:"Foundational expertise in analytics, data management, and enterprise data solutions.",meta:"Apr 2026 → Apr 2027",badge:"sap-badge.png",skills:["SAP BDC","Analytics"],href:"https://www.credly.com/badges/d1d7893b-7941-4cf2-8c4a-e60ce0ffb237/public_url",span:"span-4"},
-    {issuer:"Oracle",title:"Analytics Cloud 2025 Professional",desc:"Expertise in data modeling, visualization, advanced analytics, and machine learning.",meta:"Oct 2025 → Oct 2027",badge:"oracle-badge.png",skills:["OAC","Modeling","ML"],href:"https://catalog-education.oracle.com/ords/certview/sharebadge?id=0BB79A43527A363EEFEE1781A86FB0ABE3578255543741933149A1E845EDE800",span:"span-4"},
-    {issuer:"Altair (RapidMiner)",title:"Machine Learning Professional",desc:"Classification, regression, clustering, and feature importance.",meta:"Sep 2025",badge:"ml-badge.png",skills:["ML","Clustering"],href:"https://openbadgefactory.com/obv3/credentials/dc5642318198228c654ed0695527511075261bff",span:"span-4"},
-    {issuer:"Altair (RapidMiner)",title:"Data Engineering Professional",desc:"Data access, transformations, multi-dataset workflows, and data processing.",meta:"Aug 2025",badge:"data-eng-badge.png",skills:["Data Access","Transformation"],href:"https://openbadgefactory.com/obv3/credentials/2ff63de886d187a4ff7a27ae751c75f6ab3656ff",span:"span-12"}
-  ]
-};
-
-const ICONS={
-  building:'<path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>',
-  agent:'<path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>',
-  layers:'<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>',
-  cloud:'<path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>',
-  rocket:'<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>',
-  chart:'<path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>',
-  code:'<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
-  database:'<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>',
-  settings:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>'
-};
-const svg=n=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[n]||""}</svg>`;
-const $=s=>document.querySelector(s);
-const $$=s=>[...document.querySelectorAll(s)];
-const pill=(t,hi=false)=>`<span class="pill${hi?" pill-accent":""}">${t}</span>`;
-
-$("#nav").innerHTML=DATA.nav.map(([i,l])=>`<a href="#${i}">${l}</a>`).join("");
-$("#mq").innerHTML=[...DATA.tech,...DATA.tech].map(t=>`<span>${t}</span>`).join("");
-$("#yr").textContent=new Date().getFullYear();
-
-$("#g-high").innerHTML=DATA.highlights.map(h=>`<div class="tile reveal ${h.span}" style="padding:28px;display:flex;flex-direction:column"><div class="icon-box">${svg(h.icon)}</div><h3 style="font-size:1.25rem;margin-top:18px">${h.title}</h3><p class="muted" style="font-size:.875rem;margin:10px 0 16px;flex:1">${h.body}</p><div>${pill(h.tag,true)}</div></div>`).join("");
-$("#about-txt").innerHTML=DATA.about.map(p=>`<p class="muted" style="font-size:.9rem;margin:0 0 14px">${p}</p>`).join("");
-$("#loved").innerHTML=DATA.loved.map(t=>pill(t,true)).join("");
-$("#goals").innerHTML=DATA.roles.map(r=>`<li style="display:flex;align-items:center;gap:10px;font-size:.875rem;margin-bottom:8px"><span style="width:6px;height:6px;border-radius:99px;background:var(--primary);flex-shrink:0"></span>${r}</li>`).join("");
-$("#g-skills").innerHTML=DATA.skills.map(s=>`<div class="tile reveal ${s.span}" style="padding:28px"><div style="display:flex;align-items:center;gap:12px"><div class="icon-box">${svg(s.icon)}</div><h3 style="font-size:1.1rem">${s.title}</h3></div><div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:8px">${s.items.map(([n,h])=>pill(n,!!h)).join("")}</div></div>`).join("");
-
-/* Experience with company logos */
-$("#g-exp").innerHTML=DATA.exp.map(e=>`
-  <div class="tile reveal ${e.full?"span-12":"span-6"}" style="padding:28px">
-    <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:16px">
-      <div style="display:flex;align-items:center;gap:14px">
-        <img class="exp-logo" src="${e.logo}" alt="${e.company}" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
-        <div class="mono-circle" style="display:none">${e.short}</div>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="sec-head reveal">
         <div>
-          <h3 style="font-size:1.25rem">${e.role}</h3>
-          <p class="muted" style="font-size:.875rem;margin:2px 0 0">${e.company}</p>
+          <div class="label">
+            <span class="line"></span>
+            <span class="mono">03 / Core Stack</span>
+          </div>
+          <h2 class="text-grad">Skills &amp; Tooling</h2>
+        </div>
+        <p class="desc">The languages, platforms and practices behind the pipelines.</p>
+      </div>
+      <div class="sec-rule"></div>
+      <div class="bento" style="margin-top:28px" id="g-skills"></div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="sec-head reveal">
+        <div>
+          <div class="label">
+            <span class="line"></span>
+            <span class="mono">04 / History</span>
+          </div>
+          <h2 class="text-grad">Experience</h2>
+        </div>
+        <p class="desc">Internships across market research, enterprise engineering and data products.</p>
+      </div>
+      <div class="sec-rule"></div>
+      <div class="bento" style="margin-top:28px" id="g-exp"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="sec-head reveal">
+        <div>
+          <div class="label">
+            <span class="line"></span>
+            <span class="mono">05 / Work</span>
+          </div>
+          <h2 class="text-grad">Projects</h2>
+        </div>
+        <p class="desc">Flagship builds — from AI analytics platforms to end-to-end ML pipelines.</p>
+      </div>
+      <div class="sec-rule"></div>
+      <div id="g-proj" style="margin-top:28px;display:grid;gap:16px"></div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="sec-head reveal">
+        <div>
+          <div class="label">
+            <span class="line"></span>
+            <span class="mono">06 / Academics</span>
+          </div>
+          <h2 class="text-grad">Education</h2>
         </div>
       </div>
-      <div style="text-align:right">
-        <div class="mono">${e.duration}</div>
-        <p class="muted" style="font-size:.75rem;margin:4px 0 0">${e.location}</p>
+      <div class="sec-rule"></div>
+      <div class="bento" style="margin-top:28px" id="g-edu"></div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+      <div class="sec-head reveal">
+        <div>
+          <div class="label">
+            <span class="line"></span>
+            <span class="mono">07 / Credentials</span>
+          </div>
+          <h2 class="text-grad">Certifications</h2>
+        </div>
+        <p class="desc">Seven industry certifications across cloud, data engineering and AI.</p>
       </div>
-    </div>
-    <ul class="exp-bullets ${e.full?"two":""}">${e.bullets.map(b=>`<li>${b}</li>`).join("")}</ul>
-    <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px">${e.stack.map(t=>pill(t)).join("")}</div>
-  </div>`).join("");
+      <div class="sec-rule"></div>
+      <div class="bento" style="margin-top:28px" id="g-cert"></div>
+    </section>
 
-/* Projects with properly sized preview */
-$("#g-proj").innerHTML=DATA.proj.map(p=>`
-  <div class="bento">
-    <div class="tile tile-glow reveal span-5" style="padding:32px;display:flex;flex-direction:column;justify-content:space-between">
-      <div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">${pill(p.tagline,true)}${p.live?pill("Live",true):""}</div>
-        <h3 style="font-size:1.85rem;margin-top:16px">${p.title}</h3>
-        <p class="muted" style="font-size:.875rem;margin-top:10px">${p.desc}</p>
-        <div class="mono" style="margin-top:16px">${p.period}</div>
+    <!-- CONTACT -->
+    <section id="contact" style="padding-bottom:96px">
+      <div class="sec-head reveal">
+        <div>
+          <div class="label">
+            <span class="line"></span>
+            <span class="mono">08 / Contact</span>
+          </div>
+          <h2 class="text-grad">Let's build something</h2>
+        </div>
+        <p class="desc">Open to internships and full-time Data Engineering roles.</p>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
-        ${p.actions.map(([l,h,pr])=>`<a class="btn ${pr?"btn-primary":"btn-ghost"}" href="${h}" target="_blank" rel="noopener">${l}</a>`).join("")}
+      <div class="sec-rule"></div>
+      <div class="bento" style="margin-top:28px">
+        <div class="tile reveal span-12" style="padding:32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;background:var(--primary);border-color:var(--primary);color:#fff">
+          <div>
+            <h3 style="font-size:1.5rem;color:#fff">Open for collaboration</h3>
+            <p style="margin:4px 0 0;opacity:.85">Let's build something scalable.</p>
+          </div>
+          <a class="btn" href="mailto:sangramkesharighose@gmail.com" style="background:#fff;color:var(--primary)">
+            Get in Touch
+          </a>
+        </div>
+
+        <a class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;min-height:140px" href="mailto:sangramkesharighose@gmail.com">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </div>
+          <span class="mono">Email</span>
+          <span style="font-family:Syne;font-weight:700;font-size:.9rem;margin-top:8px;word-break:break-all">
+            sangramkesharighose@gmail.com
+          </span>
+        </a>
+
+        <a class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;min-height:140px" href="tel:+918456841232">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+          </div>
+          <span class="mono">Phone</span>
+          <span style="font-family:Syne;font-weight:700;font-size:.95rem;margin-top:8px">+91 8456841232</span>
+        </a>
+
+        <a class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;min-height:140px" href="https://github.com/sangramghose" target="_blank" rel="noopener">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+          </div>
+          <span class="mono">GitHub</span>
+          <span style="font-family:Syne;font-weight:700;font-size:.95rem;margin-top:8px">@sangramghose</span>
+        </a>
+
+        <a class="tile reveal span-3" style="padding:24px;display:flex;flex-direction:column;min-height:140px" href="https://www.linkedin.com/in/sangramghose/" target="_blank" rel="noopener">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect width="4" height="12" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </div>
+          <span class="mono">LinkedIn</span>
+          <span style="font-family:Syne;font-weight:700;font-size:.95rem;margin-top:8px">in/sangramghose</span>
+        </a>
       </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="yr"></span> Sangram Keshari Ghose · Built with focus &amp; precision
     </div>
-    <div class="reveal span-7" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-      ${p.features.map(([t,b])=>`<div class="tile" style="padding:20px"><h4 style="font-size:.95rem">${t}</h4><p class="muted" style="font-size:.8rem;margin-top:6px">${b}</p></div>`).join("")}
-    </div>
-    ${p.preview?`<div class="tile reveal span-12 project-preview" style="padding:0"><img src="${p.preview}" alt="${p.title} preview" loading="lazy" onerror="this.closest('.project-preview').remove()"/></div>`:""}
-    <div class="tile reveal span-12" style="padding:20px 28px;display:flex;flex-wrap:wrap;gap:8px">${p.stack.map(t=>pill(t)).join("")}</div>
-  </div>`).join("");
+  </footer>
 
-$("#g-edu").innerHTML=`
-  <div class="tile reveal span-8" style="padding:32px;display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
-    <img src="giet-logo.png" alt="GIET" style="width:56px;height:56px;border-radius:14px;object-fit:contain;background:#fff;padding:6px;border:1px solid var(--border)" onerror="this.remove()"/>
-    <div style="flex:1;min-width:200px">
-      <h3 style="font-size:1.2rem">B.Tech, Computer Science and Engineering</h3>
-      <p class="muted" style="font-size:.875rem;margin-top:6px">Gandhi Institute of Engineering and Technology University</p>
-      <p class="muted" style="font-size:.8rem;margin-top:2px">Gunupur, Odisha, India</p>
-    </div>
-  </div>
-  <div class="tile reveal span-4" style="padding:32px;background:var(--elevated);border-color:var(--border-strong);display:flex;flex-direction:column;justify-content:space-between">
-    <div class="mono">Timeline</div>
-    <div style="margin-top:20px">
-      <div style="font-family:Syne;font-size:1.5rem;font-weight:800">Aug 2023 – Present</div>
-      <div style="margin-top:12px">${pill("Expected Graduation: June 2027",true)}</div>
-    </div>
-  </div>`;
+  <script>
+    const DATA = {
+      nav: [
+        ["home", "Home"],
+        ["highlights", "Highlights"],
+        ["about", "About"],
+        ["skills", "Skills"],
+        ["experience", "Experience"],
+        ["projects", "Projects"],
+        ["education", "Education"],
+        ["certifications", "Certifications"],
+        ["contact", "Contact"]
+      ],
+      roles: [
+        "Data Engineer",
+        "AI Data Engineer",
+        "Machine Learning Engineer",
+        "Data Consultant",
+        "Data Analyst"
+      ],
+      tech: [
+        "Python",
+        "SQL",
+        "Pandas",
+        "Machine Learning",
+        "Time Series",
+        "Google Cloud",
+        "Microsoft Fabric",
+        "Agentic AI",
+        "EDA",
+        "Data Engineering"
+      ],
+      highlights: [
+        {
+          icon: "building",
+          title: "Industry Internships",
+          body: "Hands-on experience at Frost & Sullivan, Infinite Computer Solutions, and Zoho — delivering real-world analytics and data solutions.",
+          tag: "3 Companies",
+          span: "span-5"
+        },
+        {
+          icon: "agent",
+          title: "Nebius Certified",
+          body: "Agentic AI Builder — building autonomous AI agents, generative workflows, and RAG pipelines.",
+          tag: "Agentic AI",
+          span: "span-4"
+        },
+        {
+          icon: "layers",
+          title: "Microsoft Fabric",
+          body: "Fabric Data Engineer Associate — end-to-end data engineering on Microsoft's unified analytics platform.",
+          tag: "Certification",
+          span: "span-3"
+        },
+        {
+          icon: "cloud",
+          title: "Google Cloud",
+          body: "Associate Cloud Engineer — designing, deploying, and managing secure, scalable solutions on GCP.",
+          tag: "Cloud",
+          span: "span-3"
+        },
+        {
+          icon: "rocket",
+          title: "Deploytual",
+          body: "Deploy intelligence. Any data. Anywhere. — AI-powered analytics platform with AutoML, NL querying & one-click reports.",
+          tag: "Flagship Project",
+          span: "span-5"
+        },
+        {
+          icon: "chart",
+          title: "WorkforceIQ",
+          body: "End-to-end workforce analytics pipeline with attrition prediction, clustering & sentiment analysis on 50K+ records.",
+          tag: "ML Pipeline",
+          span: "span-4"
+        }
+      ],
+      about: [
+        "I'm <strong>Sangram Keshari Ghose</strong>, a Data Engineering &amp; Analytics professional who loves turning messy, large-scale datasets into reliable insights and production-ready systems.",
+        "My journey has taken me through high-impact internships where I worked on industry datasets, built forecasting models, and collaborated with cross-functional teams to deliver consulting-grade deliverables.",
+        "I specialize in <strong>Data Engineering &amp; Analytics</strong> — cleaning, modeling, forecasting, and communicating findings that actually move the needle.",
+        "I enjoy working across industries that thrive on data-driven decisions, and I'm constantly exploring the intersection of traditional data engineering and modern AI systems."
+      ],
+      loved: [
+        "Python",
+        "SQL",
+        "Pandas",
+        "Time Series",
+        "Machine Learning",
+        "Google Cloud",
+        "Microsoft Fabric",
+        "Agentic AI"
+      ],
+      skills: [
+        {
+          icon: "code",
+          title: "Programming & Data",
+          span: "span-4",
+          items: [
+            ["Python", 1],
+            ["SQL", 1],
+            ["Pandas", 1],
+            ["NumPy", 0],
+            ["N1QL", 0],
+            ["Node.js", 0]
+          ]
+        },
+        {
+          icon: "agent",
+          title: "Machine Learning & AI",
+          span: "span-8",
+          items: [
+            ["Machine Learning", 1],
+            ["Time Series (Prophet / SARIMAX)", 1],
+            ["Scikit-learn", 0],
+            ["Random Forest", 0],
+            ["K-Means", 0],
+            ["Agentic AI", 1],
+            ["RAG", 0],
+            ["VADER / NLP", 0]
+          ]
+        },
+        {
+          icon: "database",
+          title: "Data Engineering",
+          span: "span-7",
+          items: [
+            ["ETL Pipelines", 1],
+            ["Data Cleaning & EDA", 1],
+            ["Data Modeling", 0],
+            ["Microsoft Fabric", 1],
+            ["Couchbase", 0],
+            ["Data Profiling", 0],
+            ["Schema Mapping", 0]
+          ]
+        },
+        {
+          icon: "cloud",
+          title: "Cloud & DevOps",
+          span: "span-5",
+          items: [
+            ["Google Cloud (GCP)", 1],
+            ["Docker", 0],
+            ["Kubernetes", 0],
+            ["Helm", 0],
+            ["CI/CD", 0],
+            ["FastAPI", 0]
+          ]
+        },
+        {
+          icon: "chart",
+          title: "Visualization & BI",
+          span: "span-5",
+          items: [
+            ["Tableau", 1],
+            ["Plotly", 0],
+            ["Chart.js", 0],
+            ["Power Automate", 0],
+            ["Executive Reporting", 0]
+          ]
+        },
+        {
+          icon: "settings",
+          title: "Practices & Tools",
+          span: "span-7",
+          items: [
+            ["Git & GitHub", 0],
+            ["Agile / Scrum", 0],
+            ["REST APIs", 0],
+            ["JWT + OAuth", 0],
+            ["WebSocket", 0],
+            ["Model Evaluation (RMSE, MAE, MAPE)", 0]
+          ]
+        }
+      ],
+      exp: [
+        {
+          short: "FS",
+          role: "Data & Analytics Intern",
+          company: "Frost & Sullivan",
+          duration: "Jun 2025 – Aug 2025",
+          location: "Mumbai, Maharashtra, India",
+          full: true,
+          logo: "frost-logo.png",
+          bullets: [
+            "Analyzed large-scale industry datasets using Python, Pandas, and SQL, supporting market intelligence, trend analysis, and demand forecasting across 2 industry sectors.",
+            "Assisted in developing SARIMAX and Prophet forecasting models while performing data cleaning, feature engineering, and exploratory data analysis (EDA) to improve the quality and reliability of forecasting datasets.",
+            "Evaluated forecasting models using RMSE, MAE, and MAPE, contributing to the validation of 10+ forecasting scenarios and preparing analytical outputs for internal research reports and consulting deliverables.",
+            "Collaborated with a 6-member analytics team to interpret market trends, prepare business reports, and translate analytical findings into data-driven insights that supported client presentations and strategic research projects."
+          ],
+          stack: [
+            "Python",
+            "SQL",
+            "Machine Learning",
+            "Data Analysis",
+            "EDA",
+            "Time Series Forecasting"
+          ]
+        },
+        {
+          short: "IC",
+          role: "Software Engineer Intern",
+          company: "Infinite Computer Solutions",
+          duration: "Apr 2025 – Jun 2025",
+          location: "Bengaluru, Karnataka, India",
+          full: false,
+          logo: "infinite-logo.png",
+          bullets: [
+            "Developed analytics-focused microservices and automated KPI dashboards using Node.js, Couchbase (N1QL), and REST APIs, delivering real-time workforce analytics for 20+ stakeholders and reducing report turnaround time by 60%.",
+            "Engineered ETL-style data pipelines to extract, transform, and deliver analytics-ready datasets from Couchbase, automating recurring reporting workflows and eliminating approximately 4 hours of manual reporting effort per week.",
+            "Contributed to the migration of enterprise data from IBM DB2 (SQL) to Couchbase (NoSQL) using a Pub-Sub architecture, supporting scalable data processing, backend optimization, and real-time analytics.",
+            "Collaborated with cross-functional engineering teams in an Agile environment to build, test, and optimize backend services, improving application reliability, data quality, and performance for an enterprise analytics platform."
+          ],
+          stack: [
+            "Node.js",
+            "Couchbase",
+            "N1QL",
+            "REST APIs",
+            "ETL Pipelines",
+            "Pub-Sub",
+            "Agile"
+          ]
+        },
+        {
+          short: "ZO",
+          role: "Summer Intern",
+          company: "Zoho · DataPrep 2.0",
+          duration: "Jun 2024 – Jul 2024",
+          location: "Chennai, Tamil Nadu, India",
+          full: false,
+          logo: "zoho-logo.png",
+          bullets: [
+            "Learned the fundamentals of Zoho DataPrep 2.0 and explored data preparation concepts, including data cleaning, transformation, and validation.",
+            "Gained hands-on experience with ETL workflows, data profiling, and schema mapping through guided tasks and product exploration.",
+            "Assisted in feature testing, dataset validation, and identifying data quality issues to support product development.",
+            "Worked with SQL and sample datasets to understand data preparation, transformation, and analytics workflows."
+          ],
+          stack: [
+            "Zoho DataPrep",
+            "ETL",
+            "Data Profiling",
+            "SQL",
+            "Agile"
+          ]
+        }
+      ],
+      proj: [
+        {
+          title: "Deploytual",
+          tagline: "Deploy intelligence. Any data. Anywhere.",
+          live: true,
+          desc: "An AI-powered analytics platform that unifies data connectivity, natural language querying, automated machine learning, and one-click reporting into a single, deployable engine.",
+          period: "Jun 2026 – Present",
+          preview: "deploytual-preview.png",
+          features: [
+            ["Natural Language Querying", "Ask questions in plain English — AI converts them into SQL or Pandas automatically."],
+            ["AutoML Engine", "Anomaly detection, time-series forecasting (Prophet), and clustering — zero ML expertise required."],
+            ["AI Data Cleaning Studio", "Missing value alerts, outlier detection, and one-click fixes."],
+            ["Explainable AI + Storyteller", "Every answer reveals the exact code. Built-in text-to-speech reads insights aloud."],
+            ["One-Click Executive Reports", "Boardroom-ready PDFs with AI-written summaries, charts, and forecasts."],
+            ["End-to-End Pipeline Builder", "Turn plain-English commands into fully automated ETL → ML → Report workflows."]
+          ],
+          stack: [
+            "Python",
+            "FastAPI",
+            "Pandas",
+            "scikit-learn",
+            "Prophet",
+            "Docker",
+            "Kubernetes",
+            "Helm",
+            "CI/CD"
+          ],
+          actions: [
+            ["Live Demo", "https://deploytual.netlify.app/", 1],
+            ["GitHub", "https://github.com/sangramghose/Deploytual", 0],
+            ["API Docs", "https://deploytual.onrender.com/docs", 0]
+          ]
+        },
+        {
+          title: "WorkforceIQ",
+          tagline: "Workforce Analytics Platform",
+          live: false,
+          desc: "End-to-end analytics pipeline ingesting 50K+ employee records and 10K call transcripts with attrition prediction, clustering, and sentiment analysis.",
+          period: "Jan 2026 – May 2026",
+          preview: null,
+          features: [
+            ["Attrition Prediction", "Random Forest on 50K records achieving 85%+ accuracy."],
+            ["Employee Segmentation", "K-Means clustering revealed 4 behavioral personas including a high-risk segment."],
+            ["Call Sentiment Analysis", "VADER scoring of 10K transcripts with ~92% label agreement."],
+            ["Interactive Dashboards", "Tableau + self-contained Plotly HTML dashboards."],
+            ["Automated Reporting", "Power Automate cut manual HR reporting turnaround by 60%."],
+            ["Modular Pipeline", "Every stage writes to disk — independent and re-runnable."]
+          ],
+          stack: [
+            "Python",
+            "Pandas",
+            "Scikit-learn",
+            "NLTK",
+            "Tableau",
+            "Plotly",
+            "Power Automate"
+          ],
+          actions: [
+            ["View on GitHub", "https://github.com/sangramghose/Workforce-and-Industry-Trend-Analyzer", 1]
+          ]
+        }
+      ],
+      cert: [
+        {
+          issuer: "Google Cloud",
+          title: "Associate Cloud Engineer",
+          desc: "Certified in deploying, managing, and monitoring cloud solutions on GCP.",
+          meta: "Jul 2026 → Jul 2029",
+          badge: "gcp-badge.png",
+          skills: ["GCP", "GKE", "IAM", "Networking"],
+          href: "https://www.credly.com/badges/00aa87ff-d48f-4b9c-9282-800a1d5a45ef/public_url",
+          span: "span-5"
+        },
+        {
+          issuer: "Nebius Academy",
+          title: "Agentic AI Builder",
+          desc: "Certified in building AI-powered applications, agentic workflows, and RAG pipelines.",
+          meta: "Jul 2026",
+          badge: "nebius-badge.png",
+          skills: ["AI Agents", "Generative AI", "RAG"],
+          href: "https://www.credly.com/badges/5d0821dd-6916-48d6-b3a8-99170ca85762/public_url",
+          span: "span-4"
+        },
+        {
+          issuer: "Microsoft",
+          title: "Fabric Data Engineer Associate",
+          desc: "Certified in building and managing data analytics solutions and pipelines with Microsoft Fabric.",
+          meta: "May 2026 → May 2027",
+          badge: "fabric-badge.png",
+          skills: ["Fabric", "Ingestion", "Transformation"],
+          href: "https://learn.microsoft.com/en-us/users/sangramkesharighose-1289/credentials/6b4e231e67ca56a",
+          span: "span-3"
+        },
+        {
+          issuer: "SAP",
+          title: "SAP Business Data Cloud",
+          desc: "Foundational expertise in analytics, data management, and enterprise data solutions.",
+          meta: "Apr 2026 → Apr 2027",
+          badge: "sap-badge.png",
+          skills: ["SAP BDC", "Analytics"],
+          href: "https://www.credly.com/badges/d1d7893b-7941-4cf2-8c4a-e60ce0ffb237/public_url",
+          span: "span-4"
+        },
+        {
+          issuer: "Oracle",
+          title: "Analytics Cloud 2025 Professional",
+          desc: "Expertise in data modeling, visualization, advanced analytics, and machine learning.",
+          meta: "Oct 2025 → Oct 2027",
+          badge: "oracle-badge.png",
+          skills: ["OAC", "Modeling", "ML"],
+          href: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=0BB79A43527A363EEFEE1781A86FB0ABE3578255543741933149A1E845EDE800",
+          span: "span-4"
+        },
+        {
+          issuer: "Altair (RapidMiner)",
+          title: "Machine Learning Professional",
+          desc: "Classification, regression, clustering, and feature importance.",
+          meta: "Sep 2025",
+          badge: "ml-badge.png",
+          skills: ["ML", "Clustering"],
+          href: "https://openbadgefactory.com/obv3/credentials/dc5642318198228c654ed0695527511075261bff",
+          span: "span-4"
+        },
+        {
+          issuer: "Altair (RapidMiner)",
+          title: "Data Engineering Professional",
+          desc: "Data access, transformations, multi-dataset workflows, and data processing.",
+          meta: "Aug 2025",
+          badge: "data-eng-badge.png",
+          skills: ["Data Access", "Transformation"],
+          href: "https://openbadgefactory.com/obv3/credentials/2ff63de886d187a4ff7a27ae751c75f6ab3656ff",
+          span: "span-12"
+        }
+      ]
+    };
 
-$("#g-cert").innerHTML=DATA.cert.map(c=>`
-  <a class="tile tile-link reveal ${c.span}" href="${c.href}" target="_blank" rel="noopener" style="padding:24px">
-    <img class="cert-badge" src="${c.badge}" alt="${c.title}" onerror="this.remove()"/>
-    <div class="mono">${c.issuer}</div>
-    <h3 style="font-size:1.05rem;margin-top:8px">${c.title}</h3>
-    <p class="muted" style="font-size:.8rem;margin:8px 0;flex:1">${c.desc}</p>
-    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">${c.skills.map(s=>pill(s)).join("")}</div>
-    <div class="mono" style="margin-top:12px">${c.meta}</div>
-  </a>`).join("");
+    const ICONS = {
+      building: '<path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>',
+      agent: '<path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>',
+      layers: '<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>',
+      cloud: '<path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>',
+      rocket: '<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>',
+      chart: '<path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>',
+      code: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
+      database: '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>',
+      settings: '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>'
+    };
 
-/* Reveal */
-const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12,rootMargin:"0px 0px -40px 0px"});
-$$(".reveal").forEach((n,i)=>{n.style.transitionDelay=(Math.min(i%7,6)*70)+"ms";io.observe(n)});
+    const svg = (name) =>
+      `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[name] || ""}</svg>`;
 
-/* Counters */
-const cio=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;const n=e.target,to=+n.dataset.to,sf=n.dataset.suffix||"";let s=null;const step=t=>{s??=t;const p=Math.min((t-s)/1100,1);n.textContent=Math.round(to*(1-Math.pow(1-p,3)))+sf;if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step);cio.unobserve(n)})},{threshold:.4});
-$$(".count").forEach(n=>cio.observe(n));
+    const $ = (s) => document.querySelector(s);
+    const $$ = (s) => [...document.querySelectorAll(s)];
+    const pill = (t, hi = false) =>
+      `<span class="pill${hi ? " pill-accent" : ""}">${t}</span>`;
 
-/* Typed */
-(()=>{const el=$("#typed");let i=0,j=0,del=false;(function loop(){const w=DATA.roles[i];el.textContent=w.slice(0,j);if(!del&&j<w.length)j++;else if(!del&&j===w.length){del=true;return setTimeout(loop,1800)}else if(del&&j>0)j--;else{del=false;i=(i+1)%DATA.roles.length}setTimeout(loop,del?36:72)})()})();
+    $("#nav").innerHTML = DATA.nav
+      .map(([id, label]) => `<a href="#${id}">${label}</a>`)
+      .join("");
 
-/* Nav active + scroll */
-const header=$("#header");const secs=DATA.nav.map(([id])=>document.getElementById(id));
-addEventListener("scroll",()=>{header.classList.toggle("scrolled",scrollY>40);let cur=secs[0]?.id;secs.forEach(s=>{if(s&&s.getBoundingClientRect().top<=innerHeight*.32)cur=s.id});$$("#nav a").forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+cur))},{passive:true});
+    $("#mq").innerHTML = [...DATA.tech, ...DATA.tech]
+      .map((t) => `<span>${t}</span>`)
+      .join("");
 
-/* Theme */
-const root=document.documentElement;const saved=localStorage.getItem("theme");if(saved)root.dataset.theme=saved;
-$("#theme").onclick=()=>{root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";localStorage.setItem("theme",root.dataset.theme)};
-</script>
+    $("#yr").textContent = new Date().getFullYear();
+
+    $("#g-high").innerHTML = DATA.highlights
+      .map(
+        (h) => `
+      <div class="tile reveal ${h.span}" style="padding:28px;display:flex;flex-direction:column">
+        <div class="icon-box">${svg(h.icon)}</div>
+        <h3 style="font-size:1.25rem;margin-top:18px">${h.title}</h3>
+        <p class="muted" style="font-size:.875rem;margin:10px 0 16px;flex:1">${h.body}</p>
+        <div>${pill(h.tag, true)}</div>
+      </div>`
+      )
+      .join("");
+
+    $("#about-txt").innerHTML = DATA.about
+      .map((p) => `<p class="muted" style="font-size:.9rem;margin:0 0 14px">${p}</p>`)
+      .join("");
+
+    $("#loved").innerHTML = DATA.loved.map((t) => pill(t, true)).join("");
+
+    $("#goals").innerHTML = DATA.roles
+      .map(
+        (r) => `
+      <li style="display:flex;align-items:center;gap:10px;font-size:.875rem;margin-bottom:8px">
+        <span style="width:6px;height:6px;border-radius:99px;background:var(--primary);flex-shrink:0"></span>
+        ${r}
+      </li>`
+      )
+      .join("");
+
+    $("#g-skills").innerHTML = DATA.skills
+      .map(
+        (s) => `
+      <div class="tile reveal ${s.span}" style="padding:28px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="icon-box">${svg(s.icon)}</div>
+          <h3 style="font-size:1.1rem">${s.title}</h3>
+        </div>
+        <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:8px">
+          ${s.items.map(([n, h]) => pill(n, !!h)).join("")}
+        </div>
+      </div>`
+      )
+      .join("");
+
+    $("#g-exp").innerHTML = DATA.exp
+      .map(
+        (e) => `
+      <div class="tile reveal ${e.full ? "span-12" : "span-6"}" style="padding:28px">
+        <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:16px">
+          <div style="display:flex;align-items:center;gap:14px">
+            <img class="exp-logo" src="${e.logo}" alt="${e.company}" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+            <div class="mono-circle" style="display:none">${e.short}</div>
+            <div>
+              <h3 style="font-size:1.25rem">${e.role}</h3>
+              <p class="muted" style="font-size:.875rem;margin:2px 0 0">${e.company}</p>
+            </div>
+          </div>
+          <div style="text-align:right">
+            <div class="mono">${e.duration}</div>
+            <p class="muted" style="font-size:.75rem;margin:4px 0 0">${e.location}</p>
+          </div>
+        </div>
+        <ul class="exp-bullets ${e.full ? "two" : ""}">
+          ${e.bullets.map((b) => `<li>${b}</li>`).join("")}
+        </ul>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px">
+          ${e.stack.map((t) => pill(t)).join("")}
+        </div>
+      </div>`
+      )
+      .join("");
+
+    $("#g-proj").innerHTML = DATA.proj
+      .map(
+        (p) => `
+      <div class="bento">
+        <div class="tile tile-glow reveal span-5" style="padding:32px;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              ${pill(p.tagline, true)}
+              ${p.live ? pill("Live", true) : ""}
+            </div>
+            <h3 style="font-size:1.85rem;margin-top:16px">${p.title}</h3>
+            <p class="muted" style="font-size:.875rem;margin-top:10px">${p.desc}</p>
+            <div class="mono" style="margin-top:16px">${p.period}</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
+            ${p.actions
+              .map(
+                ([l, h, pr]) =>
+                  `<a class="btn ${pr ? "btn-primary" : "btn-ghost"}" href="${h}" target="_blank" rel="noopener">${l}</a>`
+              )
+              .join("")}
+          </div>
+        </div>
+        <div class="reveal span-7" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          ${p.features
+            .map(
+              ([t, b]) => `
+            <div class="tile" style="padding:20px">
+              <h4 style="font-size:.95rem">${t}</h4>
+              <p class="muted" style="font-size:.8rem;margin-top:6px">${b}</p>
+            </div>`
+            )
+            .join("")}
+        </div>
+        ${
+          p.preview
+            ? `<div class="tile reveal span-12 project-preview" style="padding:0">
+                <img src="${p.preview}" alt="${p.title} preview" loading="lazy" onerror="this.closest('.project-preview').remove()" />
+              </div>`
+            : ""
+        }
+        <div class="tile reveal span-12" style="padding:20px 28px;display:flex;flex-wrap:wrap;gap:8px">
+          ${p.stack.map((t) => pill(t)).join("")}
+        </div>
+      </div>`
+      )
+      .join("");
+
+    $("#g-edu").innerHTML = `
+      <div class="tile reveal span-8" style="padding:32px;display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+        <img
+          src="giet-logo.png"
+          alt="GIET University"
+          style="width:56px;height:56px;border-radius:14px;object-fit:contain;background:#fff;padding:6px;border:1px solid var(--border)"
+          onerror="this.remove()"
+        />
+        <div style="flex:1;min-width:200px">
+          <h3 style="font-size:1.2rem">B.Tech, Computer Science and Engineering</h3>
+          <p class="muted" style="font-size:.875rem;margin-top:6px">
+            Gandhi Institute of Engineering and Technology University
+          </p>
+          <p class="muted" style="font-size:.8rem;margin-top:2px">Gunupur, Odisha, India</p>
+        </div>
+      </div>
+      <div class="tile reveal span-4" style="padding:32px;background:var(--elevated);border-color:var(--border-strong);display:flex;flex-direction:column;justify-content:space-between">
+        <div class="mono">Timeline</div>
+        <div style="margin-top:20px">
+          <div style="font-family:Syne;font-size:1.5rem;font-weight:800">Aug 2023 – Present</div>
+          <div style="margin-top:12px">${pill("Expected Graduation: June 2027", true)}</div>
+        </div>
+      </div>`;
+
+    $("#g-cert").innerHTML = DATA.cert
+      .map(
+        (c) => `
+      <a class="tile tile-link reveal ${c.span}" href="${c.href}" target="_blank" rel="noopener" style="padding:24px">
+        <img class="cert-badge" src="${c.badge}" alt="${c.title}" onerror="this.remove()" />
+        <div class="mono">${c.issuer}</div>
+        <h3 style="font-size:1.05rem;margin-top:8px">${c.title}</h3>
+        <p class="muted" style="font-size:.8rem;margin:8px 0;flex:1">${c.desc}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
+          ${c.skills.map((s) => pill(s)).join("")}
+        </div>
+        <div class="mono" style="margin-top:12px">${c.meta}</div>
+      </a>`
+      )
+      .join("");
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    $$(".reveal").forEach((n, i) => {
+      n.style.transitionDelay = Math.min(i % 7, 6) * 70 + "ms";
+      io.observe(n);
+    });
+
+    const cio = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const n = e.target;
+          const to = +n.dataset.to;
+          const sf = n.dataset.suffix || "";
+          let start = null;
+          const step = (t) => {
+            start ??= t;
+            const p = Math.min((t - start) / 1100, 1);
+            n.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))) + sf;
+            if (p < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+          cio.unobserve(n);
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    $$(".count").forEach((n) => cio.observe(n));
+
+    (() => {
+      const el = $("#typed");
+      let i = 0;
+      let j = 0;
+      let del = false;
+      (function loop() {
+        const w = DATA.roles[i];
+        el.textContent = w.slice(0, j);
+        if (!del && j < w.length) {
+          j++;
+        } else if (!del && j === w.length) {
+          del = true;
+          return setTimeout(loop, 1800);
+        } else if (del && j > 0) {
+          j--;
+        } else {
+          del = false;
+          i = (i + 1) % DATA.roles.length;
+        }
+        setTimeout(loop, del ? 36 : 72);
+      })();
+    })();
+
+    const header = $("#header");
+    const secs = DATA.nav.map(([id]) => document.getElementById(id));
+
+    addEventListener(
+      "scroll",
+      () => {
+        header.classList.toggle("scrolled", scrollY > 40);
+        let cur = secs[0]?.id;
+        secs.forEach((s) => {
+          if (s && s.getBoundingClientRect().top <= innerHeight * 0.32) {
+            cur = s.id;
+          }
+        });
+        $$("#nav a").forEach((a) =>
+          a.classList.toggle("active", a.getAttribute("href") === "#" + cur)
+        );
+      },
+      { passive: true }
+    );
+
+    const root = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    if (saved) root.dataset.theme = saved;
+
+    $("#theme").onclick = () => {
+      root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", root.dataset.theme);
+    };
+  </script>
 </body>
 </html>
