@@ -1112,7 +1112,109 @@ footer {
       agent:'<path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>',
       layers:'<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>',
       cloud:'<path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>',
-      rocket:'<path d="M4.5 tile tile-link reveal ${c.span}" href="${c.href}" target="_blank" rel="noopener" style="padding:24px">
+      rocket:'<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>',
+      chart:'<path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>',
+      code:'<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
+      database:'<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>',
+      settings:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>'
+    };
+
+    const svg = (n) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[n]||""}</svg>`;
+    const $ = (s) => document.querySelector(s);
+    const $$ = (s) => [...document.querySelectorAll(s)];
+    const pill = (t, hi=false) => `<span class="pill${hi?" pill-accent":""}">${t}</span>`;
+
+    $("#nav").innerHTML = DATA.nav.map(([id,l]) => `<a href="#${id}">${l}</a>`).join("");
+    $("#mq").innerHTML = [...DATA.tech,...DATA.tech].map(t => `<span>${t}</span>`).join("");
+    $("#yr").textContent = new Date().getFullYear();
+
+    $("#g-high").innerHTML = DATA.highlights.map(h => `
+      <div class="tile reveal ${h.span}" style="padding:28px;display:flex;flex-direction:column">
+        <div class="icon-box">${svg(h.icon)}</div>
+        <h3 style="font-size:1.3rem;margin-top:18px;letter-spacing:-0.025em">${h.title}</h3>
+        <p class="muted" style="font-size:.9rem;margin:10px 0 16px;flex:1;line-height:1.72">${h.body}</p>
+        <div>${pill(h.tag,true)}</div>
+      </div>`).join("");
+
+    $("#about-txt").innerHTML = DATA.about.map(p => `<p class="muted" style="font-size:.96rem;margin:0 0 16px;line-height:1.78">${p}</p>`).join("");
+    $("#loved").innerHTML = DATA.loved.map(t => pill(t,true)).join("");
+    $("#goals").innerHTML = DATA.roles.map(r => `
+      <li style="display:flex;align-items:center;gap:10px;font-size:.9rem;margin-bottom:10px;color:var(--fg)">
+        <span style="width:6px;height:6px;border-radius:99px;background:var(--primary);flex-shrink:0"></span>${r}
+      </li>`).join("");
+
+    $("#g-skills").innerHTML = DATA.skills.map(s => `
+      <div class="tile reveal ${s.span}" style="padding:28px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="icon-box">${svg(s.icon)}</div>
+          <h3 style="font-size:1.15rem;letter-spacing:-0.02em">${s.title}</h3>
+        </div>
+        <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:8px">
+          ${s.items.map(([n,h]) => pill(n,!!h)).join("")}
+        </div>
+      </div>`).join("");
+
+    $("#g-exp").innerHTML = DATA.exp.map(e => `
+      <div class="tile reveal ${e.full?"span-12":"span-6"}" style="padding:28px">
+        <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:16px">
+          <div style="display:flex;align-items:center;gap:14px">
+            <img class="exp-logo" src="${e.logo}" alt="${e.company}" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+            <div class="mono-circle" style="display:none">${e.short}</div>
+            <div>
+              <h3 style="font-size:1.3rem;letter-spacing:-0.025em">${e.role}</h3>
+              <p class="muted" style="font-size:.9rem;margin:4px 0 0">${e.company}</p>
+            </div>
+          </div>
+          <div style="text-align:right">
+            <div class="mono">${e.duration}</div>
+            <p class="muted" style="font-size:.8rem;margin:4px 0 0">${e.location}</p>
+          </div>
+        </div>
+        <ul class="exp-bullets ${e.full?"two":""}">${e.bullets.map(b=>`<li>${b}</li>`).join("")}</ul>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px">
+          ${e.stack.map(t=>pill(t)).join("")}
+        </div>
+      </div>`).join("");
+
+    $("#g-proj").innerHTML = DATA.proj.map(p => `
+      <div class="bento">
+        <div class="tile tile-glow reveal span-5" style="padding:34px;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">${pill(p.tagline,true)}${p.live?pill("Live",true):""}</div>
+            <h3 style="font-size:1.95rem;margin-top:16px;letter-spacing:-0.03em">${p.title}</h3>
+            <p class="muted" style="font-size:.9rem;margin-top:12px;line-height:1.72">${p.desc}</p>
+            <div class="mono" style="margin-top:16px">${p.period}</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
+            ${p.actions.map(([l,h,pr])=>`<a class="btn ${pr?"btn-primary":"btn-ghost"}" href="${h}" target="_blank" rel="noopener">${l}</a>`).join("")}
+          </div>
+        </div>
+        <div class="reveal span-7" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          ${p.features.map(([t,b])=>`<div class="tile" style="padding:20px"><h4 style="font-size:1rem;letter-spacing:-0.02em">${t}</h4><p class="muted" style="font-size:.85rem;margin-top:8px;line-height:1.65">${b}</p></div>`).join("")}
+        </div>
+        ${p.preview?`<div class="tile reveal span-12 project-preview" style="padding:0"><img src="${p.preview}" alt="${p.title}" loading="lazy" onerror="this.closest('.project-preview').remove()"></div>`:""}
+        <div class="tile reveal span-12" style="padding:20px 28px;display:flex;flex-wrap:wrap;gap:8px">${p.stack.map(t=>pill(t)).join("")}</div>
+      </div>`).join("");
+
+    $("#g-edu").innerHTML = `
+      <div class="tile reveal span-8" style="padding:34px;display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+        <img src="giet-logo.png" alt="GIET" style="width:56px;height:56px;border-radius:14px;object-fit:contain;background:#fff;padding:6px;border:1px solid var(--border)" onerror="this.remove()">
+        <div style="flex:1;min-width:200px">
+          <h3 style="font-size:1.25rem;letter-spacing:-0.025em">B.Tech, Computer Science and Engineering</h3>
+          <p class="muted" style="font-size:.9rem;margin-top:8px">Gandhi Institute of Engineering and Technology University</p>
+          <p class="muted" style="font-size:.85rem;margin-top:4px">Gunupur, Odisha, India</p>
+        </div>
+      </div>
+      <div class="tile reveal span-4" style="padding:34px;background:var(--elevated);border-color:var(--border-strong);display:flex;flex-direction:column;justify-content:space-between">
+        <div class="mono">Timeline</div>
+        <div style="margin-top:20px">
+          <div style="font-family:Syne;font-size:1.55rem;font-weight:800;letter-spacing:-0.025em">Aug 2023 – Present</div>
+          <div style="margin-top:12px">${pill("Expected Graduation: June 2027",true)}</div>
+        </div>
+      </div>`;
+
+    $("#g-cert").innerHTML = DATA.cert.map(c => `
+      <a class="tile tile-link reveal ${c.span}" href="${c.href}" target="_blank" rel="noopener" style="padding:24px">
         <img class="cert-badge" src="${c.badge}" alt="${c.title}" onerror="this.remove()">
         <div class="mono">${c.issuer}</div>
         <h3 style="font-size:1.1rem;margin-top:8px;letter-spacing:-0.02em">${c.title}</h3>
