@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WorkforceIQ — Case Study | Sangram Keshari Ghose</title>
+<meta name="description" content="Case study: WorkforceIQ — workforce analytics pipeline with attrition prediction, employee segmentation, sentiment analysis, and automated dashboards." />
+<link rel="canonical" href="https://sangramghose.github.io/projects/workforceiq.html" />
+<meta property="og:title" content="WorkforceIQ — Case Study | Sangram Keshari Ghose" />
+<meta property="og:description" content="50K+ records, 10K transcripts, 85%+ attrition accuracy, automated stakeholder reporting." />
+<meta property="og:url" content="https://sangramghose.github.io/projects/workforceiq.html" />
+<meta property="og:image" content="https://sangramghose.github.io/profile.png" />
+<meta name="theme-color" content="#07070f" />
+<link rel="icon" href="../profile.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "WorkforceIQ",
+  "description": "Workforce analytics pipeline with ML attrition prediction, clustering, sentiment analysis, and Tableau/Plotly delivery.",
+  "url": "https://sangramghose.github.io/projects/workforceiq.html",
+  "codeRepository": "https://github.com/sangramghose/Workforce-and-Industry-Trend-Analyzer",
+  "programmingLanguage": ["Python"],
+  "author": { "@type": "Person", "name": "Sangram Keshari Ghose", "url": "https://sangramghose.github.io/" },
+  "dateCreated": "2026-01"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sangramghose.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://sangramghose.github.io/#projects" },
+    { "@type": "ListItem", "position": 3, "name": "WorkforceIQ", "item": "https://sangramghose.github.io/projects/workforceiq.html" }
+  ]
+}
+</script>
+<style>
+:root {
+  --bg: #07070f; --surface: #12122a; --elevated: #1a1a3d;
+  --border: rgba(99,102,241,.16); --border-strong: rgba(99,102,241,.42);
+  --fg: #f0f1ff; --muted: #9b9fc4; --primary: #6366f1; --accent2: #a5b4fc;
+  --grad: linear-gradient(125deg,#67e8f9 0%,#6366f1 45%,#c084fc 100%);
+  --radius: 22px; --max: 860px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Syne,system-ui,sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.15;margin:0 0 .6em}
+h1{font-size:clamp(2.2rem,5vw,3.2rem)}
+h2{font-size:1.55rem;margin-top:2.5rem}
+h3{font-size:1.15rem;margin-top:1.5rem}
+p{margin:0 0 1.1em;color:var(--muted)}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px 80px}
+.topbar{border-bottom:1px solid var(--border);padding:18px 0;margin-bottom:40px}
+.topbar-inner{max-width:var(--max);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{font-family:Syne;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.crumb{font-size:.85rem;color:var(--muted)}
+.crumb a{color:var(--muted)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 28px}
+.pill{display:inline-block;padding:6px 12px;border-radius:999px;font-size:.72rem;font-weight:600;border:1px solid var(--border-strong);background:rgba(99,102,241,.14);color:var(--accent2)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin:28px 0}
+.arch{background:var(--elevated);border:1px solid var(--border);border-radius:16px;padding:24px;overflow-x:auto;margin:20px 0}
+.arch svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;font-weight:700;font-size:.875rem;border:1px solid transparent;color:#fff;background:var(--grad);text-decoration:none}
+.btn:hover{text-decoration:none;opacity:.95}
+.btn-ghost{background:transparent;border-color:var(--border);color:var(--fg)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+ul{margin:0 0 1.2em;padding-left:1.2em;color:var(--muted)}
+li{margin-bottom:.45em}
+.metric-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:24px 0}
+.metric{background:var(--elevated);border:1px solid var(--border);border-radius:14px;padding:18px;text-align:center}
+.metric strong{display:block;font-family:Syne;font-size:1.6rem;color:var(--fg)}
+.metric span{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;color:var(--muted);font-size:.875rem}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../">SKG</a>
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href="../">Home</a> · <a href="../#projects">Projects</a> · <span>WorkforceIQ</span>
+      </nav>
+    </div>
+  </div>
+
+  <article class="wrap">
+    <p class="crumb" style="margin-bottom:8px">Case study · Jan 2026 – May 2026</p>
+    <h1>WorkforceIQ</h1>
+    <p style="font-size:1.15rem;color:var(--fg);font-weight:500">From raw HR and call data to predictive models and dashboards people actually open.</p>
+    <div class="hero-meta">
+      <span class="pill">50K+ employee records</span>
+      <span class="pill">10K transcripts</span>
+      <span class="pill">85%+ attrition accuracy</span>
+      <span class="pill">~92% sentiment agreement</span>
+    </div>
+    <div class="actions">
+      <a class="btn" href="https://github.com/sangramghose/Workforce-and-Industry-Trend-Analyzer" target="_blank" rel="noopener">View on GitHub</a>
+      <a class="btn btn-ghost" href="../#projects">All projects</a>
+    </div>
+
+    <h2>Problem</h2>
+    <p>HR attrition data, engagement signals, and call-center sentiment usually live in separate spreadsheets. By the time someone spots a pattern, high performers may already have resigned. Weekly stakeholder reports were assembled by hand — slow, error-prone, and hard to trust.</p>
+    <p>WorkforceIQ was built as one connected pipeline: clean the data, score attrition risk, segment the workforce, analyze call sentiment, and push results into Tableau, Plotly HTML dashboards, and automated email — without restitching steps every Tuesday.</p>
+
+    <h2>Constraints</h2>
+    <ul>
+      <li>Interpretability over marginal accuracy gains (HR needs to know <em>why</em> someone is high-risk).</li>
+      <li>Every stage must write durable outputs to disk so cleaning, models, and dashboards can re-run independently.</li>
+      <li>Delivery must work with and without Tableau (self-contained Plotly HTML for zero-license viewers).</li>
+      <li>Datasets are synthetic but realistic — the engineering is the product, not confidential employer data.</li>
+    </ul>
+
+    <h2>Architecture</h2>
+    <div class="arch" role="img" aria-label="WorkforceIQ pipeline diagram">
+      <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif" font-size="12">
+        <defs>
+          <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#67e8f9"/><stop offset="100%" stop-color="#6366f1"/></linearGradient>
+        </defs>
+        <rect width="720" height="300" fill="#0a0a18" rx="12"/>
+        <rect x="30" y="110" width="110" height="60" rx="10" fill="#1a1a3d" stroke="#6366f1"/>
+        <text x="85" y="138" text-anchor="middle" fill="#f0f1ff">Raw Excel</text>
+        <text x="85" y="156" text-anchor="middle" fill="#9b9fc4">/ CSV</text>
+        <path d="M140 140 H175" stroke="url(#g2)" stroke-width="2"/>
+        <rect x="175" y="110" width="120" height="60" rx="10" fill="#12122a" stroke="#818cf8" stroke-width="2"/>
+        <text x="235" y="138" text-anchor="middle" fill="#a5b4fc" font-weight="700">Clean</text>
+        <text x="235" y="156" text-anchor="middle" fill="#9b9fc4">Pandas · SQL</text>
+        <path d="M295 140 H330" stroke="url(#g2)" stroke-width="2"/>
+        <rect x="330" y="70" width="150" height="140" rx="12" fill="#12122a" stroke="#6366f1" stroke-width="2"/>
+        <text x="405" y="100" text-anchor="middle" fill="#a5b4fc" font-weight="700">ML layer</text>
+        <text x="405" y="122" text-anchor="middle" fill="#f0f1ff">Random Forest</text>
+        <text x="405" y="142" text-anchor="middle" fill="#f0f1ff">K-Means</text>
+        <text x="405" y="162" text-anchor="middle" fill="#f0f1ff">VADER</text>
+        <text x="405" y="186" text-anchor="middle" fill="#9b9fc4">Scored CSVs</text>
+        <path d="M480 140 H515" stroke="url(#g2)" stroke-width="2"/>
+        <rect x="515" y="55" width="175" height="50" rx="10" fill="#1a1a3d" stroke="#818cf8"/>
+        <text x="602" y="85" text-anchor="middle" fill="#f0f1ff">Tableau</text>
+        <rect x="515" y="120" width="175" height="50" rx="10" fill="#1a1a3d" stroke="#818cf8"/>
+        <text x="602" y="150" text-anchor="middle" fill="#f0f1ff">Plotly HTML</text>
+        <rect x="515" y="185" width="175" height="50" rx="10" fill="#1a1a3d" stroke="#818cf8"/>
+        <text x="602" y="215" text-anchor="middle" fill="#f0f1ff">Power Automate</text>
+        <text x="360" y="275" text-anchor="middle" fill="#9b9fc4" font-size="11">Each stage writes to disk — independent re-runs without breaking the chain</text>
+      </svg>
+    </div>
+
+    <h2>What I built</h2>
+    <div class="card">
+      <h3>Machine learning</h3>
+      <ul>
+        <li><strong>Attrition:</strong> Random Forest on 50,000 employee records; satisfaction, tenure, overtime, and commute distance as top drivers; each person gets a probability, label, and segment.</li>
+        <li><strong>Segmentation:</strong> K-Means into four behavioral personas — including a small high-risk, low-satisfaction, high-overtime cluster that drives a disproportionate share of predicted attrition.</li>
+        <li><strong>Sentiment:</strong> VADER on ~10,000 call transcripts with about 92% agreement to labels; compound scores and Positive / Neutral / Negative categories for trend tracking.</li>
+      </ul>
+      <h3>Delivery</h3>
+      <ul>
+        <li>Three Tableau workbooks (employee trends, automotive market lens, call-center analysis).</li>
+        <li>Self-contained Plotly HTML dashboards (attrition, segments, sentiment) generatable via script — no Tableau license required.</li>
+        <li>Power Automate flow that emailed stakeholder summaries and cut manual reporting turnaround by about 60%.</li>
+      </ul>
+    </div>
+
+    <h2>Results</h2>
+    <div class="metric-row">
+      <div class="metric"><strong>50K+</strong><span>Records modeled</span></div>
+      <div class="metric"><strong>10K</strong><span>Transcripts scored</span></div>
+      <div class="metric"><strong>85%+</strong><span>Attrition accuracy</span></div>
+      <div class="metric"><strong>60%</strong><span>Faster reporting</span></div>
+    </div>
+    <p>The pipeline answers three business questions in one system: who might leave, how the workforce clusters behaviorally, and whether call sentiment is drifting — with outputs stakeholders can open without waiting on a custom extract each week.</p>
+
+    <h2>What I’d do differently</h2>
+    <ul>
+      <li>Replace one-shot CSVs with scheduled ingestion and rolling retrain windows.</li>
+      <li>Add lightweight prediction-drift monitoring so model quality is visible over time.</li>
+      <li>For mixed-sentiment and sarcasm on calls, evaluate a fine-tuned transformer beyond VADER’s lexicon scores.</li>
+      <li>Publish a static confusion-matrix / cluster plot image on the case-study page for scanners who never open the repo.</li>
+    </ul>
+
+    <div class="actions" style="margin-top:40px">
+      <a class="btn" href="../#projects">← Back to projects</a>
+      <a class="btn btn-ghost" href="deploytual.html">Deploytual case study →</a>
+    </div>
+  </article>
+  <footer>© 2026 Sangram Keshari Ghose</footer>
+</body>
+</html>
