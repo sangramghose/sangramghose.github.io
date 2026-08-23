@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Deploytual — Case Study | Sangram Keshari Ghose</title>
+<meta name="description" content="Case study: Deploytual — AI analytics platform with natural-language querying, AutoML, pipelines, and one-click executive reports. Architecture, what was built, and results." />
+<link rel="canonical" href="https://sangramghose.github.io/projects/deploytual.html" />
+<meta property="og:title" content="Deploytual — Case Study | Sangram Keshari Ghose" />
+<meta property="og:description" content="Deploy intelligence. Any data. Anywhere. Architecture, pipeline, and results." />
+<meta property="og:url" content="https://sangramghose.github.io/projects/deploytual.html" />
+<meta property="og:image" content="https://sangramghose.github.io/deploytual-preview.png" />
+<meta name="theme-color" content="#07070f" />
+<link rel="icon" href="../profile.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Deploytual",
+  "description": "AI-powered analytics platform with natural-language querying, AutoML, data cleaning, and one-click executive reports.",
+  "url": "https://sangramghose.github.io/projects/deploytual.html",
+  "codeRepository": "https://github.com/sangramghose/Deploytual",
+  "programmingLanguage": ["Python", "JavaScript", "HTML"],
+  "author": { "@type": "Person", "name": "Sangram Keshari Ghose", "url": "https://sangramghose.github.io/" },
+  "license": "https://opensource.org/licenses/MIT",
+  "dateCreated": "2026-06"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sangramghose.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://sangramghose.github.io/#projects" },
+    { "@type": "ListItem", "position": 3, "name": "Deploytual", "item": "https://sangramghose.github.io/projects/deploytual.html" }
+  ]
+}
+</script>
+<style>
+:root {
+  --bg: #07070f; --surface: #12122a; --elevated: #1a1a3d;
+  --border: rgba(99,102,241,.16); --border-strong: rgba(99,102,241,.42);
+  --fg: #f0f1ff; --muted: #9b9fc4; --primary: #6366f1; --accent2: #a5b4fc;
+  --grad: linear-gradient(125deg,#67e8f9 0%,#6366f1 45%,#c084fc 100%);
+  --radius: 22px; --max: 860px; --ease: cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Syne,system-ui,sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.15;margin:0 0 .6em}
+h1{font-size:clamp(2.2rem,5vw,3.2rem)}
+h2{font-size:1.55rem;margin-top:2.5rem}
+h3{font-size:1.15rem;margin-top:1.5rem}
+p{margin:0 0 1.1em;color:var(--muted)}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px 80px}
+.topbar{border-bottom:1px solid var(--border);padding:18px 0;margin-bottom:40px}
+.topbar-inner{max-width:var(--max);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{font-family:Syne;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.crumb{font-size:.85rem;color:var(--muted)}
+.crumb a{color:var(--muted)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 28px}
+.pill{display:inline-block;padding:6px 12px;border-radius:999px;font-size:.72rem;font-weight:600;border:1px solid var(--border-strong);background:rgba(99,102,241,.14);color:var(--accent2)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin:28px 0}
+.arch{background:var(--elevated);border:1px solid var(--border);border-radius:16px;padding:24px;overflow-x:auto;margin:20px 0}
+.arch svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;font-weight:700;font-size:.875rem;border:1px solid transparent;color:#fff;background:var(--grad);text-decoration:none}
+.btn:hover{text-decoration:none;opacity:.95}
+.btn-ghost{background:transparent;border-color:var(--border);color:var(--fg)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+ul{margin:0 0 1.2em;padding-left:1.2em;color:var(--muted)}
+li{margin-bottom:.45em}
+.metric-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:24px 0}
+.metric{background:var(--elevated);border:1px solid var(--border);border-radius:14px;padding:18px;text-align:center}
+.metric strong{display:block;font-family:Syne;font-size:1.6rem;color:var(--fg);letter-spacing:-.02em}
+.metric span{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;color:var(--muted);font-size:.875rem}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../">SKG</a>
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href="../">Home</a> · <a href="../#projects">Projects</a> · <span>Deploytual</span>
+      </nav>
+    </div>
+  </div>
+
+  <article class="wrap">
+    <p class="crumb" style="margin-bottom:8px">Case study · Jun 2026 – Present</p>
+    <h1>Deploytual</h1>
+    <p style="font-size:1.15rem;color:var(--fg);font-weight:500">Deploy intelligence. Any data. Anywhere.</p>
+    <div class="hero-meta">
+      <span class="pill">AI analytics platform</span>
+      <span class="pill">FastAPI · Python</span>
+      <span class="pill">Kubernetes · Helm</span>
+      <span class="pill">Live</span>
+    </div>
+    <div class="actions">
+      <a class="btn" href="https://deploytual.netlify.app/" target="_blank" rel="noopener">Live demo</a>
+      <a class="btn btn-ghost" href="https://github.com/sangramghose/Deploytual" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" href="https://deploytual.onrender.com/docs" target="_blank" rel="noopener">API docs</a>
+    </div>
+
+    <h2>Problem</h2>
+    <p>Most teams still bounce between spreadsheets, ad-hoc SQL, notebook models, and slide decks. Answering a simple business question often means waiting on an engineer, copying data by hand, and hoping the last report is still accurate. Non-technical stakeholders rarely get explainable answers in one place.</p>
+    <p>Deploytual was built to close that gap: one deployable engine that connects to data, answers questions in plain English, runs AutoML, cleans data, and produces board-ready reports — without forcing every user through a notebook workflow.</p>
+
+    <h2>Constraints</h2>
+    <ul>
+      <li>Must run as a portable package (Docker / Kubernetes), not a locked SaaS-only tool.</li>
+      <li>Answers must be explainable (show the SQL or Pandas code behind each result).</li>
+      <li>Support mixed sources: CSV/Excel first, then SQL databases and APIs.</li>
+      <li>Ship the smallest usable product path: upload → query → report → then harden auth, pipelines, and K8s.</li>
+    </ul>
+
+    <h2>Architecture</h2>
+    <p>Ingestion, AI query, ML services, cleaning, reporting, and auth sit behind a FastAPI backend. The frontend is a single-page app. Pipelines chain ETL → ML → report, with WebSocket notifications on completion.</p>
+    <div class="arch" role="img" aria-label="Deploytual architecture diagram">
+      <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif" font-size="12">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#67e8f9"/><stop offset="50%" stop-color="#6366f1"/><stop offset="100%" stop-color="#c084fc"/></linearGradient>
+        </defs>
+        <rect width="720" height="320" fill="#0a0a18" rx="12"/>
+        <!-- Sources -->
+        <rect x="24" y="40" width="120" height="48" rx="10" fill="#1a1a3d" stroke="#6366f1" stroke-width="1.5"/>
+        <text x="84" y="68" text-anchor="middle" fill="#f0f1ff">CSV / Excel</text>
+        <rect x="24" y="100" width="120" height="48" rx="10" fill="#1a1a3d" stroke="#6366f1" stroke-width="1.5"/>
+        <text x="84" y="128" text-anchor="middle" fill="#f0f1ff">SQL / Mongo</text>
+        <rect x="24" y="160" width="120" height="48" rx="10" fill="#1a1a3d" stroke="#6366f1" stroke-width="1.5"/>
+        <text x="84" y="188" text-anchor="middle" fill="#f0f1ff">REST APIs</text>
+        <!-- Arrow -->
+        <path d="M150 124 H190" stroke="url(#g)" stroke-width="2" marker-end="url(#m)"/>
+        <!-- Core -->
+        <rect x="200" y="70" width="160" height="120" rx="12" fill="#12122a" stroke="url(#g)" stroke-width="2"/>
+        <text x="280" y="105" text-anchor="middle" fill="#a5b4fc" font-weight="700">FastAPI Core</text>
+        <text x="280" y="128" text-anchor="middle" fill="#9b9fc4">Ingest · Profile</text>
+        <text x="280" y="148" text-anchor="middle" fill="#9b9fc4">Auth · Pipeline</text>
+        <text x="280" y="168" text-anchor="middle" fill="#9b9fc4">WebSocket</text>
+        <!-- ML services -->
+        <path d="M360 130 H400" stroke="url(#g)" stroke-width="2"/>
+        <rect x="410" y="30" width="130" height="44" rx="10" fill="#1a1a3d" stroke="#818cf8"/>
+        <text x="475" y="56" text-anchor="middle" fill="#f0f1ff">NL → SQL/Pandas</text>
+        <rect x="410" y="86" width="130" height="44" rx="10" fill="#1a1a3d" stroke="#818cf8"/>
+        <text x="475" y="112" text-anchor="middle" fill="#f0f1ff">AutoML</text>
+        <rect x="410" y="142" width="130" height="44" rx="10" fill="#1a1a3d" stroke="#818cf8"/>
+        <text x="475" y="168" text-anchor="middle" fill="#f0f1ff">Clean studio</text>
+        <rect x="410" y="198" width="130" height="44" rx="10" fill="#1a1a3d" stroke="#818cf8"/>
+        <text x="475" y="224" text-anchor="middle" fill="#f0f1ff">PDF reports</text>
+        <!-- Deploy -->
+        <path d="M540 130 H580" stroke="url(#g)" stroke-width="2"/>
+        <rect x="580" y="90" width="120" height="80" rx="12" fill="#12122a" stroke="#6366f1" stroke-width="2"/>
+        <text x="640" y="125" text-anchor="middle" fill="#a5b4fc" font-weight="700">Deploy</text>
+        <text x="640" y="148" text-anchor="middle" fill="#9b9fc4">Docker · Helm</text>
+        <text x="640" y="168" text-anchor="middle" fill="#9b9fc4">Netlify · K8s</text>
+        <text x="360" y="290" text-anchor="middle" fill="#9b9fc4" font-size="11">Pipeline: ETL → ML → Report · Real-time notifications</text>
+      </svg>
+    </div>
+
+    <h2>What I built</h2>
+    <div class="card">
+      <h3>Backend and AI services</h3>
+      <ul>
+        <li>FastAPI routes for upload, profiling, NL query, database chat, anomaly detection, Prophet forecasting, cleaning suggestions, PDF reports, auth, and pipeline execution.</li>
+        <li>Natural-language layer that converts questions into SQL or Pandas, with the generated code shown for explainability.</li>
+        <li>AutoML: Isolation Forest anomalies, Prophet forecasts, clustering; AI cleaning studio for missing values and outliers.</li>
+        <li>JWT + Google OAuth; WebSocket toasts for pipeline and anomaly events.</li>
+      </ul>
+      <h3>Frontend and delivery</h3>
+      <ul>
+        <li>Single-page frontend with Chart.js, storyteller (text-to-speech), and visual/NL pipeline builder.</li>
+        <li>Docker Compose, GitHub Actions CI, production Helm chart, and deploy targets on Netlify (UI) and Render (API).</li>
+      </ul>
+    </div>
+
+    <h2>Results</h2>
+    <div class="metric-row">
+      <div class="metric"><strong>v2.0</strong><span>Full-stack release</span></div>
+      <div class="metric"><strong>Multi-source</strong><span>CSV · SQL · APIs</span></div>
+      <div class="metric"><strong>K8s-ready</strong><span>Helm chart</span></div>
+      <div class="metric"><strong>Live</strong><span>Netlify + Render</span></div>
+    </div>
+    <p>Deploytual is a working product path for Forward Deployed and Data Engineering use cases: drop it on a client environment, connect data, answer questions with code transparency, and export executive PDFs without a custom BI project each time.</p>
+    <div class="card" style="padding:0;overflow:hidden">
+      <img src="../deploytual-preview.png" alt="Deploytual product UI" width="1280" height="720" style="width:100%;height:auto;display:block" loading="lazy" onerror="this.parentElement.style.display='none'">
+    </div>
+
+    <h2>What I’d do differently</h2>
+    <ul>
+      <li>Introduce multi-user workspaces and RBAC earlier so auth models the real multi-tenant case.</li>
+      <li>Add contract tests on profile and query schemas so frontend and backend stay aligned under rapid feature growth.</li>
+      <li>Prioritize first-class PostgreSQL and MongoDB connectors before broader “any API” abstractions.</li>
+      <li>Ship a short recorded NL-query demo clip for portfolio visitors who will not run the live app.</li>
+    </ul>
+
+    <div class="actions" style="margin-top:40px">
+      <a class="btn" href="../#projects">← Back to projects</a>
+      <a class="btn btn-ghost" href="workforceiq.html">WorkforceIQ case study →</a>
+    </div>
+  </article>
+  <footer>© 2026 Sangram Keshari Ghose</footer>
+</body>
+</html>
