@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#67e8f9"/><stop offset="0.5" stop-color="#6366f1"/><stop offset="1" stop-color="#c084fc"/>
+  </linearGradient></defs>
+  <rect width="64" height="64" rx="14" fill="#07070f"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Syne, Verdana, sans-serif" font-size="26" font-weight="800" fill="url(#g)">SKG</text>
+</svg>
