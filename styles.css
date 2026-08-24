@@ -100,7 +100,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   50% { transform: translate3d(1.5rem, -2rem, 0) scale(1.05); }
 }
 header {
-  position: fixed; inset-x: 0; top: 0; z-index: 50; height: var(--nav-h);
+  position: fixed; left: 0; right: 0; top: 0; z-index: 50; height: var(--nav-h);
   transition: background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
   border-bottom: 1px solid transparent;
 }
@@ -513,3 +513,48 @@ footer {
   .orb, .marquee-track, .pulse, .typed::after { animation: none !important; }
   html { scroll-behavior: auto; }
 }
+/* Scroll progress indicator */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 60;
+  background: var(--grad); transform: scaleX(0); transform-origin: 0 50%;
+  pointer-events: none;
+}
+
+/* Back to top */
+.to-top {
+  position: fixed; right: 22px; bottom: 22px; z-index: 55;
+  width: 44px; height: 44px; border-radius: 14px;
+  border: 1px solid var(--border-strong); background: var(--surface); color: var(--fg);
+  display: grid; place-items: center; box-shadow: var(--card-shadow);
+  opacity: 0; visibility: hidden; transform: translateY(10px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s;
+}
+.to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.to-top:hover { border-color: var(--accent); background: rgba(99, 102, 241, 0.16); }
+
+/* Denser primary nav so ten links stay on one line */
+@media (max-width: 1180px) and (min-width: 961px) {
+  nav.links a { padding: 8px 9px; font-size: 0.82rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .marquee-track { animation: none !important; }
+  .orb { animation: none !important; }
+  .typed::after { animation: none; }
+  .pulse { animation: none; }
+  * { transition-duration: 0.01ms !important; }
+}
+
+/* Hiring enquiry tile */
+.hire-tile { padding: 34px; display: flex; flex-direction: column; gap: 22px; }
+.hire-head h3 { font-size: 1.35rem; letter-spacing: -0.02em; margin: 10px 0 8px; }
+.hire-head p { margin: 0; max-width: 62ch; }
+.hire-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.hire-item {
+  border: 1px solid var(--border); border-radius: 14px; padding: 18px;
+  background: rgba(99, 102, 241, 0.06);
+}
+.hire-item .mono { display: block; margin-bottom: 8px; color: var(--accent2); }
+.hire-item p { margin: 0; font-size: 0.92rem; }
+@media (max-width: 900px) { .hire-grid { grid-template-columns: 1fr; } }
