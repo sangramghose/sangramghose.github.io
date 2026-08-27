@@ -558,3 +558,158 @@ footer {
 .hire-item .mono { display: block; margin-bottom: 8px; color: var(--accent2); }
 .hire-item p { margin: 0; font-size: 0.92rem; }
 @media (max-width: 900px) { .hire-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   Polish layer, cursor spotlight, grain, counters, micro-detail
+   Purely additive: no layout or palette changes.
+   ============================================================ */
+
+::selection { background: rgba(99, 102, 241, 0.32); color: var(--fg); }
+
+html { scrollbar-color: var(--border-strong) transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary), #a855f7);
+  border-radius: 99px; border: 3px solid var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px; border-radius: 8px;
+}
+
+/* Fine film grain so the flat surfaces read as crafted, not default */
+.bg-grain {
+  position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Cursor-tracked spotlight on every tile */
+.tile::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  opacity: 0; transition: opacity 0.4s ease;
+  background: radial-gradient(
+    22rem 22rem at var(--mx, 50%) var(--my, 0%),
+    rgba(129, 140, 248, 0.13), transparent 62%
+  );
+}
+.tile:hover::after { opacity: 1; }
+.tile > * { position: relative; z-index: 2; }
+
+/* Hero tile gets a slow-travelling gradient hairline */
+.hero-intro { background-clip: padding-box; }
+.hero-intro::after {
+  background: radial-gradient(26rem 26rem at var(--mx, 70%) var(--my, 10%),
+    rgba(103, 232, 249, 0.12), transparent 62%);
+}
+
+/* Metric numbers: gradient ink + a lift that feels mechanical, not bouncy */
+.metric-val {
+  background: var(--grad); -webkit-background-clip: text; background-clip: text;
+  color: transparent; font-variant-numeric: tabular-nums;
+}
+.metric-link { transition: transform 0.4s var(--ease); }
+.metric-link:hover .metric-sub { color: var(--accent2); }
+.metric-sub { transition: color 0.3s ease; }
+
+/* Nav: underline sweeps in from the left instead of appearing */
+#nav a { position: relative; }
+#nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px;
+  border-radius: 2px; background: var(--grad);
+  transform: scaleX(0); transform-origin: left; transition: transform 0.35s var(--ease);
+}
+#nav a:hover::after, #nav a.active::after { transform: scaleX(1); }
+
+/* Icon tiles respond to the card, not only to themselves */
+.tile:hover .icon-box {
+  background: rgba(99, 102, 241, 0.26);
+  transform: translateY(-2px) rotate(-3deg);
+}
+.icon-box { transition: background 0.35s ease, transform 0.35s var(--ease); }
+
+/* Pills firm up on card hover */
+.tile:hover .pill { border-color: var(--border-strong); }
+.pill { transition: border-color 0.35s ease, background 0.35s ease, color 0.35s ease; }
+
+/* Reveal: add a touch of depth to the existing fade */
+.reveal { will-change: transform, opacity; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tile::after { display: none; }
+  .icon-box, .tile, .metric-link { transition: none !important; }
+  .bg-grain { display: none; }
+}
+
+/* Skills: numbered header row so each card scans in one pass */
+.skill-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.skill-num {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  padding: 3px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--fg);
+  background: var(--surface-2, transparent);
+}
+.skill-kicker {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent, currentColor);
+  opacity: 0.85;
+}
+.skill-desc {
+  margin-top: 8px;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+.skill-card:hover .skill-num { border-color: var(--border-strong); }
+
+/* ---------------------------------------------------------------------------
+   Techie detail layer: terminal cue in the hero, bracketed section markers,
+   and a hairline corner frame on the hero tile. Purely additive.
+--------------------------------------------------------------------------- */
+.term-line {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 12px; border: 1px solid var(--border); border-radius: 999px;
+  text-transform: lowercase; letter-spacing: 0.13em;
+  background: rgba(129, 140, 248, 0.06);
+  width: fit-content;
+}
+.term-prompt { color: var(--accent); font-weight: 700; letter-spacing: 0; }
+.term-line::after {
+  content: ""; width: 7px; height: 13px; background: var(--accent);
+  animation: blink 1.05s steps(1) infinite;
+}
+
+/* Section markers read like code annotations */
+.sec-head .label .mono::before { content: "["; color: var(--accent); margin-right: 4px; }
+.sec-head .label .mono::after { content: "]"; color: var(--accent); margin-left: 4px; }
+
+/* Hero tile corner frame */
+.hero-intro { position: relative; }
+.hero-intro::before {
+  content: ""; position: absolute; inset: 14px; pointer-events: none; z-index: 1;
+  border: 1px solid transparent; border-radius: 14px;
+  background:
+    linear-gradient(var(--accent), var(--accent)) top left / 22px 1px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) top left / 1px 22px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) bottom right / 22px 1px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) bottom right / 1px 22px no-repeat;
+  opacity: 0.32;
+}
+
+/* Skill numbers get a monospace chip feel */
+.skill-num { font-variant-numeric: tabular-nums; }
+.skill-card:hover .skill-kicker { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .term-line::after { animation: none; }
+}
