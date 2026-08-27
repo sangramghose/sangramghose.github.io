@@ -1,5 +1,5 @@
 /*
- * Sangram Keshari Ghose — portfolio behaviour.
+ * Sangram Keshari Ghose: portfolio behaviour.
  * Vanilla JS, no dependencies. Every block guards its own DOM so this file
  * can be shared safely between the home page and the case-study pages.
  */
@@ -9,17 +9,12 @@
   var ROLES = [
     "Data Engineer",
     "Forward Deployed Engineer",
-    "Solutions Engineer",
-    "Analytics Engineer",
-    "Agentic AI Engineer",
-    "Data Engineering Consultant",
-    "Data Analyst"
+    "Analytics Engineer"
   ];
 
   var TECH = [
-    "Python", "SQL", "Pandas", "Machine Learning", "Agentic AI",
-    "Google Cloud", "Microsoft Fabric", "RAG", "ETL",
-    "Data Engineering", "Prompt Engineering", "APIs"
+    "Python", "SQL", "ETL", "Microsoft Fabric",
+    "Google Cloud", "Agentic AI", "RAG", "Machine Learning"
   ];
 
   var $ = function (s) { return document.querySelector(s); };
@@ -38,7 +33,7 @@
       .join("");
   }
 
-  /* Theme — the saved value is applied pre-paint by an inline script in <head> */
+  /* Theme, the saved value is applied pre-paint by an inline script in <head> */
   var root = document.documentElement;
   var themeBtn = $("#theme");
   if (themeBtn) {
@@ -56,7 +51,7 @@
     });
   }
 
-  /* Mobile menu — focus trapped while open, focus returned on close */
+  /* Mobile menu, focus trapped while open, focus returned on close */
   var menuBtn = $("#menu-btn") || $("#menuBtn");
   var panel = $("#mobile-menu") || $("#mobilePanel");
 
@@ -106,7 +101,7 @@
     });
   }
 
-  /* Role typing effect (home only) — decorative, hidden from assistive tech */
+  /* Role typing effect (home only), decorative, hidden from assistive tech */
   if (!reduceMotion) {
     var typed = $("#typed");
     if (typed) {
@@ -152,7 +147,7 @@
     $$(".reveal").forEach(function (n) { n.classList.add("in"); });
   }
 
-  /* Header state, scroll progress, scroll spy, back to top — one rAF-throttled pass */
+  /* Header state, scroll progress, scroll spy, back to top, one rAF-throttled pass */
   var header = $("#header");
   var progress = $("#progress");
   var toTop = $("#to-top");
@@ -222,4 +217,54 @@
       if (!badgeWrap.querySelector("iframe")) badgeWrap.remove();
     }, 4000);
   }
+})();
+
+/* Progressive enhancement layer, spotlight + metric count-up.
+   Self-contained; skipped entirely under prefers-reduced-motion. */
+(function () {
+  "use strict";
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  var tiles = Array.prototype.slice.call(document.querySelectorAll(".tile"));
+
+  /* Cursor-tracked spotlight: one listener, rAF-batched writes */
+  var pending = null;
+  tiles.forEach(function (tile) {
+    tile.addEventListener("pointermove", function (e) {
+      if (pending) return;
+      pending = requestAnimationFrame(function () {
+        pending = null;
+        var r = tile.getBoundingClientRect();
+        tile.style.setProperty("--mx", ((e.clientX - r.left) / r.width) * 100 + "%");
+        tile.style.setProperty("--my", ((e.clientY - r.top) / r.height) * 100 + "%");
+      });
+    }, { passive: true });
+  });
+
+  /* Metric count-up, parses "91%+", "50K+", "7" and animates the number only */
+  var vals = Array.prototype.slice.call(document.querySelectorAll(".metric-val"));
+  if (!vals.length || !("IntersectionObserver" in window)) return;
+
+  function animate(el) {
+    var m = /^(\D*)([\d.]+)(.*)$/.exec(el.textContent.trim());
+    if (!m) return;
+    var pre = m[1], target = parseFloat(m[2]), post = m[3];
+    var decimals = (m[2].split(".")[1] || "").length;
+    var start = performance.now(), dur = 1100;
+    (function step(now) {
+      var t = Math.min((now - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = pre + (target * eased).toFixed(decimals) + post;
+      if (t < 1) requestAnimationFrame(step);
+    })(start);
+  }
+
+  var mo = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      mo.unobserve(e.target);
+      animate(e.target);
+    });
+  }, { threshold: 0.6 });
+  vals.forEach(function (v) { mo.observe(v); });
 })();
